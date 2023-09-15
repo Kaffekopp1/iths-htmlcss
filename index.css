@@ -230,7 +230,7 @@ header {
 #imgid2 {
   position: relative;
   background-color: var(--main-color);
-  background-image: url(bilder/meeting.jpg);
+  background-image: url(bilder/meeting.JPG);
   background-position: center;
 }
 #imgid2::before {
