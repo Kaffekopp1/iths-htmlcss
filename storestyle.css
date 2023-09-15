@@ -169,12 +169,7 @@ footer {
 	color: var(--darker-color);
 	margin: 0;
 }
-.tassbild {
-	display: hidden;
-}
-.tassbild2 {
-	display: hidden;
-}
+
 @media screen and (min-width: 500px) {
 	#erbjudande-list {
 		flex-direction: row;
@@ -224,19 +219,4 @@ footer {
 		max-height: 100%;
 		border-radius: 0px 30px 30px 0px;
 	}
-	/* .tassbild {
-    background-image: url(bilder/Tass.png);
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    margin: 50px;
-    margin-left: 0px;
-  }
-  .tassbild2 {
-    background-image: url(bilder/Tass.png);
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    margin-left: 20px;
-  } */
 }
