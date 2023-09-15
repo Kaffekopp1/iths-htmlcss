@@ -10,8 +10,20 @@
 		säker och kärleksfull miljö, utan även skräddarsydda tjänster som
 		sätter just din hunds välmående i centrum."
 		/>
-		<link rel="stylesheet" href="main.css" />
+
+		<!-- förladdar bilden med en "high" prioritet så den laddar samtidigt som stylesheet. -->
+		<!-- <link
+			rel="preload"
+			as="image"
+			href="bilder/Small/staffordSnowS.jpeg"
+			type="image/webp"
+		/> -->
 		<link rel="stylesheet" href="index.css" />
+		<!-- <link
+			rel="stylesheet"
+			href="indexLarge.css"
+			media="screen and (min-width: 500px)"
+		/> -->
 		<title>Tassen</title>
 	</head>
 	<body>
@@ -31,12 +43,7 @@
 			</select>
 
 			<!-- Kanske onödigt användande av srcset på så små bilder så jag gjorde en bild onödigt stor?  -->
-			<img
-				id="navimg-tass"
-				src="bilder/Tass50.png"
-				alt="bild-tass"
-				srcset="bilder/Tass50.png 1x, bilder/Tass500.png 2x"
-			/>
+			<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
 			<ul id="navlist">
 				<li><a class="lankar" href="index.html">Hem</a></li>
 				<li><a id="testlank" class="lankar" href="#omoss">Om oss</a></li>
@@ -149,25 +156,22 @@
 				<section id="slutsektion">
 					<section class="om-oss" id="omoss">
 						<h2>Möt Vårt Passionerade Team</h2>
+						<img
+							src="bilder/Small/personalS.jpeg"
+							alt="bild-Personal"
+							srcset="
+								bilder/Small/personalS.jpeg  1x,
+								bilder/larger/personalL.jpeg 2x,
+								bilder/larger/personalL.jpeg 3x
+							"
+						/>
 						<p>
-							Vi är ett team med en gemensam kärlek för hundar och en
-							imponerande erfarenhet inom hundvård. Med årtionden av arbete inom
-							branschen brinner vi för att skapa en kärleksfull och säker plats
-							för ditt älskade husdjur.
+							Vi är ett team med en gemensam kärlek för hundar och en lång
+							erfarenhet inom hundvård. Med årtionden av arbete inom branschen
+							brinner vi för att skapa en kärleksfull och säker plats för ditt
+							älskade husdjur.
 						</p>
-						<p>
-							Vår kloklippningsavdelning har hanterat hundars klor med
-							försiktighet och skicklighet i över 20 år. Vi har utvecklat en
-							unik förmåga att skapa en avslappnad och positiv upplevelse för
-							hundarna, oavsett om de är rädda eller förstagångsbesökare.
-						</p>
-						<p>
-							Våra hundtränare har över 15 års erfarenhet av att arbeta med
-							hundar av alla raser och storlekar. Vi använder beprövade metoder
-							som bygger på positiv förstärkning för att stärka bandet mellan
-							hund och ägare. Vår erfarenhet hjälper dig och din hund att nå era
-							mål tillsammans.
-						</p>
+						<p><em>Väl mött från oss på Tassen</em></p>
 					</section>
 					<div id="contact" class="form-container">
 						<form id="formen" action="https://test.com" method="POST">
@@ -197,6 +201,13 @@
 							></textarea>
 							<button>Skicka</button>
 						</form>
+						<section id="adress">
+							<h3>Kontakt:</h3>
+							<p>Sjögatan 42</p>
+							<p>923 43 Stadköping</p>
+							<p>070-04 95 992</p>
+							<p>email@email.com</p>
+						</section>
 					</div>
 				</section>
 			</section>

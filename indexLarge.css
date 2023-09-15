@@ -1,0 +1,142 @@
+@media screen and (min-width: 500px) {
+	#navlist {
+		display: flex;
+	}
+	#select-meny {
+		display: none;
+	}
+	#navimg-tass {
+		display: block;
+		height: 20px;
+		margin: 10px;
+	}
+	.lankar {
+		color: var(--light-color);
+		height: 100%;
+		padding: 20px;
+		background-color: var(--main-color);
+	}
+	.lankar:hover {
+		color: var(--darker-color);
+		background-color: var(--light-color);
+	}
+
+	header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		background-color: var(--medium-color1);
+		background-image: linear-gradient(
+				to right,
+				var(--darker-color),
+				80%,
+				var(--medium-color1-filter)
+			),
+			url("bilder/larger/StaffordSnowL.jpeg");
+		background-position: bottom 0% right 40%;
+		background-size: cover;
+		min-height: calc(100vh - 40px);
+		animation: zoomer 3s ease;
+	}
+
+	#header-text-container {
+		background-color: transparent;
+		color: var(--light-color);
+		margin-left: 10vw;
+		filter: Blur(0px);
+
+		animation: blurring 3s ease;
+	}
+	#en-linje {
+		background-color: var(--complement-color);
+	}
+	/* la till en skojig välkommst effekt */
+	@keyframes blurring {
+		0% {
+			filter: Blur(10px);
+		}
+		100% {
+			filter: Blur(0px);
+		}
+	}
+	@keyframes zoomer {
+		0% {
+			transform: scale(1.15, 1.15);
+		}
+		100% {
+			transform: scale(1, 1);
+		}
+	}
+	/*---------Sektion-2 ------------- */
+	#sektion-1 {
+		flex-direction: row;
+	}
+	#sektion-2 {
+		flex-direction: row-reverse;
+	}
+	.textdiv {
+		padding: 50px;
+	}
+	.imgdiv {
+		width: 50vw;
+	}
+	.textdiv {
+		width: 50vw;
+	}
+	#imgid1 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/larger/EBulldogRunnignL.jpeg");
+	}
+	#imgid2 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/larger/meetingsSheepL.jpeg");
+	}
+	/*-------------sektion-3 ------------*/
+
+	.sektion-3 {
+		margin: 10px 0;
+		gap: 100px;
+	}
+	.review-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
+		align-items: stretch;
+		gap: 20px;
+	}
+	.background-image {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/larger/bridgeL.jpeg");
+	}
+
+	/*--- tack till http://www.java2s.com/example/html-css/css-layout/change-the-order-of-flex-items-when-they-wrap.html för lösningen till att byta ordning wid wrap*/
+	.slutsektionr > div {
+		flex-shrink: 0;
+	}
+
+	#slutsektion {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 20px;
+	}
+
+	.om-oss {
+		margin: 0;
+	}
+
+	.form-container {
+		width: 350px;
+	}
+}

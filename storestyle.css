@@ -8,10 +8,7 @@ body {
 	background-color: var(--medium-color1);
 	margin: 0;
 }
-p {
-	font-family: roboL, sans-serif;
-	margin: 2px;
-}
+
 /* den vanliga blå färgen på alt blev svår att se mot min bakgrund på vissa skärmar*/
 img {
 	color: white;
