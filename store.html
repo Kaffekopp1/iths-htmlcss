@@ -1,267 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="storestyle.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="background-image-store"></div>
-    <nav id="navigationbar">
-      <!-- Kanske onödigt användande av srcset på så små bilder?  -->
-      <a href="index.html">
-        <img
-          class="navimg"
-          src="/bilder/Tass50.png"
-          alt="tass"
-          srcset="/bilder/Tass50.png 1x, /bilder/Tass500.png 2x"
-        />
-      </a>
-      <ul id="navlist">
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="store.html">Om oss</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-      <a href="store.html">
-        <img class="navimg" src="bilder/vagnljus.png" alt="kundvagn" />
-      </a>
-    </nav>
-    <main>
-      <h1 id="store-h1">Affär</h1>
-      <ul id="erbjudande-list">
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Kloklippning</h2>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="storestyle.css" />
+		<meta
+			name="description"
+			content="Här kan du beställa Tassens olika tjänster "
+		/>
+		<title>Tassens Affär</title>
+	</head>
+	<body>
+		<div id="background-image-store"></div>
+		<nav id="navigationbar">
+			<!-- Kanske onödigt användande av srcset på så små bilder?  -->
+			<a href="index.html">
+				<img
+					class="navimg"
+					src="bilder/Tass50.png"
+					alt="tass"
+					srcset="bilder/Tass50.png 1x, bilder/Tass500.png 2x"
+				/>
+			</a>
+			<ul id="navlist">
+				<li><a href="index.html">Hem</a></li>
+				<li><a href="store.html">Om oss</a></li>
+				<li><a href="contact.html">Kontakt</a></li>
+			</ul>
+			<a href="store.html">
+				<img class="navimg" src="bilder/vagnljus.png" alt="kundvagn" />
+			</a>
+		</nav>
+		<main>
+			<h1 id="store-h1">Affär</h1>
+			<ul id="erbjudande-list">
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Kloklippning</h2>
 
-            <p>Ingår:</p>
-            <ul>
-              <li>Kloklippning</li>
-            </ul>
-            <p>Pris: <em>300kr</em></p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hårklippning</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>Kloklippning</li>
+						</ul>
+						<p>Pris: <em>300kr</em></p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hårklippning</h2>
 
-            <p>Ingår:</p>
-            <ul>
-              <li>Hårklippning</li>
-              <li>Färgning</li>
-              <li>Tvätt</li>
-            </ul>
-            <p>Pris: <em>1000kr</em></p>
-            <button>Boka tid</button>
-          </article>
-        </li>
+						<p>Ingår:</p>
+						<ul>
+							<li>Hårklippning</li>
+							<li>Färgning</li>
+							<li>Tvätt</li>
+						</ul>
+						<p>Pris: <em>1000kr</em></p>
+						<button>Boka tid</button>
+					</article>
+				</li>
 
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Klipp-Paket</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>Hårklippning</li>
-              <li>Färgning</li>
-              <li>Tvätt</li>
-              <li>kloklippning</li>
-            </ul>
-            <p>Pris: <em>1100kr</em></p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Nosework</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>Nosework kurs</li>
-            </ul>
-            <p>Pris: <em>4000kr</em>kr/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Valpkurs</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>valpkurs 1 hund</li>
-            </ul>
-            <p>Pris:<em>4000kr</em></p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hunddagis</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>inskolning</li>
-              <li>1 plats på hunddagis</li>
-            </ul>
-            <p>Pris:<em>3500kr</em>/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hunddagis 2</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>inskolning</li>
-              <li>1 plats på hunddagis alla dagar</li>
-            </ul>
-            <p>Pris:<em>4500kr</em>kr/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hunddagis paket 1</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>inskolning</li>
-              <li>1 plats på hunddagis alla dagar</li>
-              <li>1 valpkurs</li>
-            </ul>
-            <p>Pris:<em> 5000kr</em>/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hunddagis 2</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>inskolning</li>
-              <li>1 plats på hunddagis vardagar och helger</li>
-            </ul>
-            <p>Pris:<em>4500kr</em>/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-        <li>
-          <article class="erbjudanden">
-            <img
-              class="erbjudande-bild"
-              src="bilder/ture.jpg"
-              alt="bild-hund"
-            />
-            <h2>Hunddagis 3</h2>
-            <p>Ingår:</p>
-            <ul>
-              <li>inskolning</li>
-              <li>1 plats på hunddagis vardagar och helger</li>
-              <li>Klipp-Paket 1 gångmånaden</li>
-            </ul>
-            <p>Pris: <em>5500kr</em>/månaden</p>
-            <button>Boka tid</button>
-          </article>
-        </li>
-      </ul>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Klipp-Paket</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>Hårklippning</li>
+							<li>Färgning</li>
+							<li>Tvätt</li>
+							<li>kloklippning</li>
+						</ul>
+						<p>Pris: <em>1100kr</em></p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Nosework</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>Nosework kurs</li>
+						</ul>
+						<p>Pris: <em>4000kr</em>kr/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Valpkurs</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>valpkurs 1 hund</li>
+						</ul>
+						<p>Pris:<em>4000kr</em></p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hunddagis</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>inskolning</li>
+							<li>1 plats på hunddagis</li>
+						</ul>
+						<p>Pris:<em>3500kr</em>/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hunddagis 2</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>inskolning</li>
+							<li>1 plats på hunddagis alla dagar</li>
+						</ul>
+						<p>Pris:<em>4500kr</em>kr/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hunddagis paket 1</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>inskolning</li>
+							<li>1 plats på hunddagis alla dagar</li>
+							<li>1 valpkurs</li>
+						</ul>
+						<p>Pris:<em> 5000kr</em>/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hunddagis 2</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>inskolning</li>
+							<li>1 plats på hunddagis vardagar och helger</li>
+						</ul>
+						<p>Pris:<em>4500kr</em>/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+				<li>
+					<article class="erbjudanden">
+						<img
+							class="erbjudande-bild"
+							src="bilder/ture.jpg"
+							alt="bild-hund"
+						/>
+						<h2>Hunddagis 3</h2>
+						<p>Ingår:</p>
+						<ul>
+							<li>inskolning</li>
+							<li>1 plats på hunddagis vardagar och helger</li>
+							<li>Klipp-Paket 1 gångmånaden</li>
+						</ul>
+						<p>Pris: <em>5500kr</em>/månaden</p>
+						<button>Boka tid</button>
+					</article>
+				</li>
+			</ul>
 
-      <section id="information">
-        <!--"side-div" för att jag inte ville att elementet skulle sträcka sig längre än innehållet. men ha möjlighet att sträcka sig hela sträckan. 	-->
-        <div id="side-div">
-          <aside>
-            <h3>Träning som Stärker Bandet mellan Dig och Din Hund</h3>
-            <p>
-              På Tassen tror vi på positiv förstärkning och belöningsbaserad
-              träning. Våra erfarna tränare hjälper dig och din hund att bygga
-              starka och positiva relationer medan ni lär er nya färdigheter och
-              knep. Oavsett om det handlar om grundläggande lydnad eller mer
-              avancerad träning, har vi program som passar alla hundar och deras
-              ägare.
-            </p>
+			<section id="information">
+				<!--"side-div" för att jag inte ville att elementet skulle sträcka sig längre än innehållet. men ha möjlighet att sträcka sig hela sträckan. 	-->
+				<div id="side-div">
+					<aside>
+						<h3>Träning som Stärker Bandet mellan Dig och Din Hund</h3>
+						<p>
+							På Tassen tror vi på positiv förstärkning och belöningsbaserad
+							träning. Våra erfarna tränare hjälper dig och din hund att bygga
+							starka och positiva relationer medan ni lär er nya färdigheter och
+							knep. Oavsett om det handlar om grundläggande lydnad eller mer
+							avancerad träning, har vi program som passar alla hundar och deras
+							ägare.
+						</p>
 
-            <p>
-              Ditt hunds välbefinnande och glädje är vår främsta prioritet. Lita
-              på oss för att ge din bästa vän den omsorg och uppmärksamhet de
-              förtjänar. Kontakta oss idag för att boka en tid eller få mer
-              information om våra tjänster. Tillsammans skapar vi en gladare och
-              friskare hundvardag!
-            </p>
-          </aside>
-          <ul>
-            <li>
-              <h4>Kloklippning</h4>
-              <p>
-                Kloklippning tar vanligtvis bara några minuter.Tänk på att ha en
-                sele eller koppel till hands för att göra processen smidigare
-                vid hämtning.
-              </p>
-            </li>
-            <li>
-              <h4>Hundpassning</h4>
-              <p>
-                Berätta om eventuella särskilda behov eller rutiner din hund
-                har, och ange när du planerar att hämta dem. Tänk på att ha en
-                sele eller koppel till hands för att göra processen smidigare
-                vid hämtning.
-              </p>
-            </li>
-            <li>
-              <h4>Nosework</h4>
-              <p>
-                Noseworkträning är ett roligt sätt att stimulera din hunds
-                sinnen. Vi erbjuder spännande övningar för att utveckla deras
-                doftförmåga och intelligens.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer><p>Pzemturis@gmail.com</p></footer>
-  </body>
+						<p>
+							Ditt hunds välbefinnande och glädje är vår främsta prioritet. Lita
+							på oss för att ge din bästa vän den omsorg och uppmärksamhet de
+							förtjänar. Kontakta oss idag för att boka en tid eller få mer
+							information om våra tjänster. Tillsammans skapar vi en gladare och
+							friskare hundvardag!
+						</p>
+					</aside>
+					<ul>
+						<li>
+							<h4>Kloklippning</h4>
+							<p>
+								Kloklippning tar vanligtvis bara några minuter.Tänk på att ha en
+								sele eller koppel till hands för att göra processen smidigare
+								vid hämtning.
+							</p>
+						</li>
+						<li>
+							<h4>Hundpassning</h4>
+							<p>
+								Berätta om eventuella särskilda behov eller rutiner din hund
+								har, och ange när du planerar att hämta dem. Tänk på att ha en
+								sele eller koppel till hands för att göra processen smidigare
+								vid hämtning.
+							</p>
+						</li>
+						<li>
+							<h4>Nosework</h4>
+							<p>
+								Noseworkträning är ett roligt sätt att stimulera din hunds
+								sinnen. Vi erbjuder spännande övningar för att utveckla deras
+								doftförmåga och intelligens.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer><p>Pzemturis@gmail.com</p></footer>
+	</body>
 </html>
 
 <!--Lämna din hund i trygga händer med vår noggranna hundpassning. Berätta om eventuella särskilda behov eller rutiner din hund har, och ange när du planerar att hämta dem.

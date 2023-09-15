@@ -2,231 +2,231 @@
 
 /*på body overflow-x hidden på grund av animationen*/
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: roboL, sans-serif;
-  background-color: var(--medium-color1);
-  margin: 0;
+	display: flex;
+	flex-direction: column;
+	font-family: roboL, sans-serif;
+	background-color: var(--medium-color1);
+	margin: 0;
 }
 p {
-  font-family: roboL, sans-serif;
-  margin: 2px;
+	font-family: roboL, sans-serif;
+	margin: 2px;
 }
 /* den vanliga blå färgen på alt blev svår att se mot min bakgrund på vissa skärmar*/
 img {
-  color: white;
+	color: white;
 }
 h1,
 h2 {
-  font-family: AgencyG, sans-serif;
-  font-size: xx-large;
+	font-family: AgencyG, sans-serif;
+	font-size: xx-large;
 }
 
 button {
-  float: right;
-  background-color: var(--main-color);
-  color: var(--light-color);
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
+	float: right;
+	background-color: var(--main-color);
+	color: var(--light-color);
+	padding: 10px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
 }
 input {
-  background-color: var(--lightest-color);
+	background-color: var(--lightest-color);
 }
 textarea {
-  background-color: var(--lightest-color);
+	background-color: var(--lightest-color);
 }
 ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }
 /* -------------Navbar--------------------- */
 #navigationbar {
-  background-color: var(--main-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+	background-color: var(--main-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 }
 
 #navlist {
-  padding: 0;
-  display: none;
-  margin: 12px;
+	padding: 0;
+	display: none;
+	margin: 12px;
 }
 .navimg {
-  height: 20px;
-  margin: 10px;
+	height: 20px;
+	margin: 10px;
 }
 
 #navlist {
-  align-items: center;
-  list-style: none;
+	align-items: center;
+	list-style: none;
 }
 #navlist li {
-  margin: 0 12px;
+	margin: 0 12px;
 }
 #navlist li a {
-  color: var(--lightest-color);
-  text-decoration: none;
+	color: var(--lightest-color);
+	text-decoration: none;
 }
 
 #store-h1 {
-  background-color: var(--darker-color);
-  color: var(--lightest-color);
-  text-align: center;
-  padding: 20px;
-  box-shadow: 2px 2px 5px 1px var(--darker-color);
+	background-color: var(--darker-color);
+	color: var(--lightest-color);
+	text-align: center;
+	padding: 20px;
+	box-shadow: 2px 2px 5px 1px var(--darker-color);
 }
 
 /*---------------------affärslista----- */
 
 #erbjudande-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .erbjudanden {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--darker-color);
-  color: var(--light-color);
-  border-radius: 20px;
-  height: 500px;
-  width: 200px;
-  text-align: left;
-  padding: 20px;
-  border-radius: 0px 30px 0px 30px;
-  border: solid var(--complement-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--darker-color);
+	color: var(--light-color);
+	border-radius: 20px;
+	height: 500px;
+	width: 200px;
+	text-align: left;
+	padding: 20px;
+	border-radius: 0px 30px 0px 30px;
+	border: solid var(--complement-color);
 
-  margin: 10px;
-  box-shadow: 2px 2px 10px 1px var(--darker-color);
+	margin: 10px;
+	box-shadow: 2px 2px 10px 1px var(--darker-color);
 }
 
 .erbjudanden ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: circle;
-  border: dotted var(--complement-color);
-  height: 500px;
-  padding: 30px;
-  border-radius: 20px;
-  gap: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: circle;
+	border: dotted var(--complement-color);
+	height: 500px;
+	padding: 30px;
+	border-radius: 20px;
+	gap: 5px;
 }
 .erbjudanden p {
-  flex-grow: 1;
-  margin: 5px;
+	flex-grow: 1;
+	margin: 5px;
 }
 .erbjudanden p em {
-  color: var(--complement-color);
+	color: var(--complement-color);
 }
 .erbjudande-bild {
-  height: 150px;
-  width: 150px;
-  border-radius: 180px;
-  align-self: center;
-  margin-top: 5px;
+	height: 150px;
+	width: 150px;
+	border-radius: 180px;
+	align-self: center;
+	margin-top: 5px;
 }
 .erbjudanden h2 {
-  margin: 5px;
-  flex-grow: 1;
+	margin: 5px;
+	flex-grow: 1;
 }
 #information {
-  padding: 20px;
-  margin: 10px;
-  margin-bottom: 20px;
-  border-radius: 20px;
+	padding: 20px;
+	margin: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
 }
 #side-div {
-  color: var(--light-color);
-  background-color: var(--darker-color);
-  padding: 5px;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 30px 30px;
-  padding: 20px;
+	color: var(--light-color);
+	background-color: var(--darker-color);
+	padding: 5px;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 30px 30px;
+	padding: 20px;
 }
 #background-image-store {
-  position: fixed;
-  background-color: var(--medium-color1);
-  background-image: url("bilder/tassbakgrund.png");
-  background-repeat: no-repeat;
-  background-position: bottom 50% right 50%;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  background-size: 90%;
-  z-index: -1;
+	position: fixed;
+	background-color: var(--medium-color1);
+	background-image: url("bilder/tassbakgrund.png");
+	background-repeat: no-repeat;
+	background-position: bottom 50% right 50%;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	background-size: 90%;
+	z-index: -1;
 }
 
 footer {
-  text-align: center;
-  background-color: var(--light-color);
-  color: var(--darker-color);
-  margin: 0;
+	text-align: center;
+	background-color: var(--light-color);
+	color: var(--darker-color);
+	margin: 0;
 }
 .tassbild {
-  display: hidden;
+	display: hidden;
 }
 .tassbild2 {
-  display: hidden;
+	display: hidden;
 }
 @media screen and (min-width: 500px) {
-  #erbjudande-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .erbjudanden {
-    margin: 0;
-  }
-  #background-image-store {
-    background-size: 80%;
-  }
-  #erbjudande-list {
-    grid-area: erbjudandelist;
-  }
-  #store-h1 {
-    grid-area: heading;
-    height: 40px;
-  }
-  main {
-    display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 100px auto;
-    grid-template-areas:
-      "heading heading"
-      "information 	erbjudandelist";
-    gap: 20px;
-  }
-  #information {
-    grid-area: information;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0px 30px 30px 0px;
-    margin: 0px;
-    margin-bottom: 20px;
-    padding: 0;
-    margin-right: 10px;
-    background-color: var(--main-color);
-    background-image: url(bilder/Tassmedium.png);
-  }
-  #side-div {
-    color: var(--light-color);
-    background-color: var(--darker-color);
-    padding: 5px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 0px 30px 30px 0px;
-  }
-  /* .tassbild {
+	#erbjudande-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.erbjudanden {
+		margin: 0;
+	}
+	#background-image-store {
+		background-size: 80%;
+	}
+	#erbjudande-list {
+		grid-area: erbjudandelist;
+	}
+	#store-h1 {
+		grid-area: heading;
+		height: 40px;
+	}
+	main {
+		display: grid;
+		grid-template-columns: 200px auto;
+		grid-template-rows: 100px auto;
+		grid-template-areas:
+			"heading heading"
+			"information 	erbjudandelist";
+		gap: 20px;
+	}
+	#information {
+		grid-area: information;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 0px 30px 30px 0px;
+		margin: 0px;
+		margin-bottom: 20px;
+		padding: 0;
+		margin-right: 10px;
+		background-color: var(--main-color);
+		background-image: url(bilder/Tassmedium.png);
+	}
+	#side-div {
+		color: var(--light-color);
+		background-color: var(--darker-color);
+		padding: 5px;
+		max-width: 100%;
+		max-height: 100%;
+		border-radius: 0px 30px 30px 0px;
+	}
+	/* .tassbild {
     background-image: url(bilder/Tass.png);
     background-size: cover;
     height: 50px;
