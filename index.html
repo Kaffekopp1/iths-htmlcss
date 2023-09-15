@@ -1,182 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="index.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<nav id="navigationbar">
-			<!--hjälp av https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag -->
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navigationbar">
+      <!--hjälp av https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag -->
 
-			<select id="select-meny" name="forma" onchange="location = this.value;">
-				<option value="#contact"></option>
-				<option value="#contact">kontakt</option>
-				<option value="#omoss">Om oss</option>
-				<option value="store.html">Affär</option>
-			</select>
+      <select id="select-meny" name="forma" onchange="location = this.value;">
+        <option id="no-value" disabled value="#select-meny">välj länk:</option>
+        <option value="#contact">kontakt</option>
+        <option value="#omoss">Om oss</option>
+        <option value="store.html">Affär</option>
+      </select>
 
-			<!-- Kanske onödigt användande av srcset på så små bilder?  -->
-			<img
-				id="navimg-tass"
-				src="/bilder/Tass50.png"
-				alt="bild-tass"
-				srcset="/bilder/Tass50.png 1x, /bilder/Tass500.png 2x"
-			/>
-			<ul id="navlist">
-				<li><a class="lankar" href="index.html">Hem</a></li>
-				<li><a id="testlank" class="lankar" href="#om-oss">Om oss</a></li>
-				<li><a class="lankar" href="#contact">Kontakt</a></li>
-			</ul>
-			<a href="store.html">
-				<img id="navimg-store" src="bilder/vagnljus.png" alt="bild-kundvagn" />
-			</a>
-		</nav>
-		<header>
-			<div id="header-text-container">
-				<div id="h1-img-container">
-					<h2>TASSENS HUNDDAGIS</h2>
-					<!--Testar lite picture element-->
-					<picture id="pictures">
-						<source media="(min-width: 500px)" srcset="bilder/Tass.png" />
-						<source media="(max-width: 500px)" srcset="bilder/tassDark.png" />
-						<img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
-					</picture>
-				</div>
-				<div id="en-linje"></div>
-				<p>
-					Vi är stolta över att vara din pålitliga partner när det gäller att ta
-					hand om din fyrbenta familjemedlem. På Tassen erbjuder vi inte bara en
-					säker och kärleksfull miljö, utan även skräddarsydda tjänster som
-					sätter just din hunds välmående i centrum.
-				</p>
+      <!-- Kanske onödigt användande av srcset på så små bilder så jag gjorde en bild onödigt stor?  -->
+      <img
+        id="navimg-tass"
+        src="bilder/Tass50.png"
+        alt="bild-tass"
+        srcset="bilder/Tass50.png 1x, bilder/Tass500.png 2x"
+      />
+      <ul id="navlist">
+        <li><a class="lankar" href="index.html">Hem</a></li>
+        <li><a id="testlank" class="lankar" href="#omoss">Om oss</a></li>
+        <li><a class="lankar" href="#contact">Kontakt</a></li>
+      </ul>
+      <a href="store.html">
+        <img id="navimg-store" src="bilder/vagnljus.png" alt="bild-kundvagn" />
+      </a>
+    </nav>
+    <header>
+      <div id="header-text-container">
+        <div id="h1-img-container">
+          <h2>TASSENS HUNDDAGIS</h2>
+          <!--Testar lite picture element-->
+          <picture id="pictures">
+            <source media="(min-width: 500px)" srcset="bilder/Tass.png" />
+            <source media="(max-width: 500px)" srcset="bilder/tassDark.png" />
+            <img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
+          </picture>
+        </div>
+        <div id="en-linje"></div>
+        <p>
+          Vi är stolta över att vara din pålitliga partner när det gäller att ta
+          hand om din fyrbenta familjemedlem. På Tassen erbjuder vi inte bara en
+          säker och kärleksfull miljö, utan även skräddarsydda tjänster som
+          sätter just din hunds välmående i centrum.
+        </p>
 
-				<button>Erbjudanden</button>
-			</div>
-		</header>
-		<main>
-			<section id="sektion-1">
-				<div class="textdiv">
-					<h2>Kloklippning med Kärlek och Omsorg</h2>
-					<p>
-						Ge din hunds tassar den kärlek de förtjänar. Våra erfarna och
-						skickliga hundfrisörer ser till att din hunds klor är klippta på ett
-						säkert och bekvämt sätt. Vi förstår att detta kan vara en skrämmande
-						upplevelse för vissa hundar, och därför tar vi oss tid att skapa en
-						lugn och positiv atmosfär.
-					</p>
-					<button>Köp</button>
-				</div>
-				<div class="imgdiv" id="imgid1"></div>
-			</section>
-			<section id="sektion-2">
-				<div class="textdiv">
-					<h2>Personliga Promenader som Anpassas efter Din Hund</h2>
-					<p>
-						Varje hund är unik, och våra professionella hundvandrare förstår det
-						väl. Vi skapar skräddarsydda promenader som passar din hunds behov
-						och energinivå. Oavsett om din vovve älskar lekfulla strövtåg i
-						naturen eller föredrar avslappnade rundor i kvarteret, är vi här för
-						att se till att de får den motion och stimulans de behöver.
-					</p>
-					<button>Köp</button>
-				</div>
-				<div class="imgdiv" id="imgid2"></div>
-			</section>
+        <button>Erbjudanden</button>
+      </div>
+    </header>
+    <main>
+      <section id="sektion-1">
+        <div class="textdiv">
+          <h2>Kloklippning med Kärlek och Omsorg</h2>
+          <p>
+            Ge din hunds tassar den kärlek de förtjänar. Våra erfarna och
+            skickliga hundfrisörer ser till att din hunds klor är klippta på ett
+            säkert och bekvämt sätt. Vi förstår att detta kan vara en skrämmande
+            upplevelse för vissa hundar, och därför tar vi oss tid att skapa en
+            lugn och positiv atmosfär.
+          </p>
+          <button>Köp</button>
+        </div>
+        <div class="imgdiv" id="imgid1"></div>
+      </section>
+      <section id="sektion-2">
+        <div class="textdiv">
+          <h2>Personliga Promenader som Anpassas efter Din Hund</h2>
+          <p>
+            Varje hund är unik, och våra professionella hundvandrare förstår det
+            väl. Vi skapar skräddarsydda promenader som passar din hunds behov
+            och energinivå. Oavsett om din vovve älskar lekfulla strövtåg i
+            naturen eller föredrar avslappnade rundor i kvarteret, är vi här för
+            att se till att de får den motion och stimulans de behöver.
+          </p>
+          <button>Köp</button>
+        </div>
+        <div class="imgdiv" id="imgid2"></div>
+      </section>
 
-			<section aria-labelledby="head3-test" class="sektion-3">
-				<div class="background-image"></div>
-				<h1 id="head3-test">Omdöme och Kontakt</h1>
+      <section aria-labelledby="head3-h2" class="sektion-3">
+        <div class="background-image"></div>
+        <h2 id="head3-h2">Omdöme och Kontakt</h2>
 
-				<section class="review-container">
-					<article class="review-div">
-						<div class="review-img" id="review-img1"></div>
-						<h3>Ruben</h3>
-						<p>
-							"Fantastiskt Hunddagis! Min hund älskar det här stället.
-							Personalen är oerhört kärleksfull och professionell. De tar hand
-							om honom som om han vore deras egen. Tack vare deras personliga
-							promenader och träning är han lyckligare och mer välmående än
-							någonsin tidigare!"
-						</p>
-						<p>
+        <section aria-labelledby="head-review-h2" class="review-container">
+          <h2 id="head-review-h2">Omdöme</h2>
+          <article class="review-div">
+            <div class="review-img" id="review-img1"></div>
+            <h3>Ruben</h3>
+            <p>
+              "Fantastiskt Hunddagis! Min hund älskar det här stället.
+              Personalen är oerhört kärleksfull och professionell. De tar hand
+              om honom som om han vore deras egen. Tack vare deras personliga
+              promenader och träning är han lyckligare och mer välmående än
+              någonsin tidigare!"
+            </p>
+            <p>- Anna S.</p>
 
-							- Anna S.
-						</p>
+            <img class="stars" src="bilder/stars.png" alt="bild-stars" />
+          </article>
+          <article class="review-div">
+            <div class="review-img" id="review-img2"></div>
+            <h3>Ture</h3>
+            <p>
+              "Bästa kloklippningen i stan! Min hund var alltid rädd för
+              kloklippning, men sedan vi började gå till Tassen, är det inget
+              problem längre. De tar sig tid att lugna honom och göra processen
+              stressfri. Jag rekommenderar dem starkt till alla hundägare."
+            </p>
 
-						<img class="stars" src="bilder/stars.png" alt="bild-stars" />
-					</article>
-					<article class="review-div">
-						<div class="review-img" id="review-img2"></div>
-						<h3>Ture</h3>
-						<p>
-							"Bästa kloklippningen i stan! Min hund var alltid rädd för
-							kloklippning, men sedan vi började gå till Tassen,
-							är det inget problem längre. De tar sig tid att lugna honom och
-							göra processen stressfri. Jag rekommenderar dem starkt till alla
-							hundägare."
+            <p>- Erik L.</p>
+            <img class="stars" src="bilder/stars.png" alt="bild-stars" />
+          </article>
+          <article class="review-div">
+            <div class="review-img" id="review-img3"></div>
+            <h3>Doris</h3>
+            <p>
+              "Ett hunddagis utöver det vanliga! Tassen har verkligen förstått
+              konsten att skapa en positiv och kärleksfull miljö för hundar. Vår
+              lilla vovve har blommat upp sedan vi började använda deras
+              tjänster. Träningen har förbättrat vår relation och gjort vår hund
+              mer lyhörd. Vi är så tacksamma!"
+            </p>
+            <p>- Maria och Anders H.</p>
+            <img class="stars" src="bilder/stars.png" alt="bild-stars" />
+          </article>
+        </section>
 
-							<p>
-
-								- Erik L.
-							</p>
-						</p>
-						<img class="stars" src="bilder/stars.png" alt="bild-stars" />
-					</article>
-					<article class="review-div">
-						<div class="review-img" id="review-img3"></div>
-						<h3>Doris</h3>
-						<p>
-							"Ett hunddagis utöver det vanliga! Tassen har
-							verkligen förstått konsten att skapa en positiv och kärleksfull
-							miljö för hundar. Vår lilla vovve har blommat upp sedan vi började
-							använda deras tjänster. Träningen har förbättrat vår relation och
-							gjort vår hund mer lyhörd. Vi är så tacksamma!"
-						</p>
-						<p>- Maria och Anders H.</p>
-						<img class="stars" src="bilder/stars.png" alt="bild-stars" />
-					</article>
-				</section>
-				<div id="slutsektion">
-					<div class="om-oss" id="omoss">
-						<h2>Möt Vårt Passionerade Team		</h2>
-<p>Vi är ett team med en gemensam kärlek för hundar och en imponerande erfarenhet inom hundvård. Med årtionden av arbete inom branschen brinner vi för att skapa en kärleksfull och säker plats för ditt älskade husdjur.</p>
-<p>Vår kloklippningsavdelning har hanterat hundars klor med försiktighet och skicklighet i över 20 år. Vi har utvecklat en unik förmåga att skapa en avslappnad och positiv upplevelse för hundarna, oavsett om de är rädda eller förstagångsbesökare. </p>
-<p>Våra hundtränare har över 15 års erfarenhet av att arbeta med hundar av alla raser och storlekar. Vi använder beprövade metoder som bygger på positiv förstärkning för att stärka bandet mellan hund och ägare. Vår erfarenhet hjälper dig och din hund att nå era mål tillsammans. </p>
-</div>
-					<div id="contact" class="form-container">
-						<form id="formen" action="https://test.com" method="POST">
-							<h2>Kontakta oss</h2>
-							<label for="namn">Namn:</label>
-							<input name="namn" id="namn" type="text" placeholder="namn" />
-							<label for="telefon">Telefon:</label>
-							<input
-								id="telefon"
-								name="telefon"
-								type="tel"
-								placeholder="Telefon"
-							/>
-							<label for="hundsort">HundRas:</label>
-							<input
-								id="hundsort"
-								name="hundsort"
-								type="text"
-								placeholder="Hund"
-							/>
-							<label for="meddelande">Meddelande: </label>
-							<textarea
-								name="meddelande"
-								id="meddelande"
-								cols="30"
-								rows="10"
-							></textarea>
-							<button>Skicka</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>Pzemturis@gmail.com</footer>
-	</body>
+        <section id="slutsektion">
+          <section class="om-oss" id="omoss">
+            <h2>Möt Vårt Passionerade Team</h2>
+            <p>
+              Vi är ett team med en gemensam kärlek för hundar och en
+              imponerande erfarenhet inom hundvård. Med årtionden av arbete inom
+              branschen brinner vi för att skapa en kärleksfull och säker plats
+              för ditt älskade husdjur.
+            </p>
+            <p>
+              Vår kloklippningsavdelning har hanterat hundars klor med
+              försiktighet och skicklighet i över 20 år. Vi har utvecklat en
+              unik förmåga att skapa en avslappnad och positiv upplevelse för
+              hundarna, oavsett om de är rädda eller förstagångsbesökare.
+            </p>
+            <p>
+              Våra hundtränare har över 15 års erfarenhet av att arbeta med
+              hundar av alla raser och storlekar. Vi använder beprövade metoder
+              som bygger på positiv förstärkning för att stärka bandet mellan
+              hund och ägare. Vår erfarenhet hjälper dig och din hund att nå era
+              mål tillsammans.
+            </p>
+          </section>
+          <div id="contact" class="form-container">
+            <form id="formen" action="https://test.com" method="POST">
+              <h2>Kontakta oss</h2>
+              <label for="namn">Namn:</label>
+              <input name="namn" id="namn" type="text" placeholder="namn" />
+              <label for="telefon">Telefon:</label>
+              <input
+                id="telefon"
+                name="telefon"
+                type="tel"
+                placeholder="Telefon"
+              />
+              <label for="hundsort">HundRas: </label>
+              <input
+                id="hundsort"
+                name="hundsort"
+                type="text"
+                placeholder="Hund"
+              />
+              <label for="meddelande">Meddelande: </label>
+              <textarea
+                name="meddelande"
+                id="meddelande"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <button>Skicka</button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer><p>Pzemturis@gmail.com</p></footer>
+  </body>
 </html>
