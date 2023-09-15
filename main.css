@@ -1,0 +1,21 @@
+:root {
+  --lightest-color: #e6ecf5;
+  --light-color: #b8c9e3;
+  --medium-color1: #2d75e1;
+  --medium-color2: #1c498c;
+  --main-color: #143566;
+  --main-color-filter2: #143566e3;
+  /* --medium-color1-filter: #1435667d; */
+  --medium-color1-filter: #1435663d;
+  --darker-color: #111e33;
+  --complement-color: #e0a42d;
+}
+@font-face {
+  font-family: "roboL";
+  src: url(./Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "AgencyG";
+  src: url("./AgencyGothicCT-Light.ttf");
+}
