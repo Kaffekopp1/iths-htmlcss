@@ -30,7 +30,7 @@ p {
 
 body {
 	margin: 0;
-	overflow-x: hidden;
+	/*overflow-x: hidden; */
 	font-family: roboL, sans-serif;
 }
 
@@ -97,10 +97,10 @@ a {
 	color: black;
 }
 
-/* ---------------------EXPERMIMEmt------------------ */
+/* ---------------------För att få en hamburger meny utan js------------------ */
 
 /*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
-#select-meny {
+#navigation-select-meny {
 	background-color: var(--dark-color);
 	height: 40px;
 	width: 40px;
@@ -117,12 +117,12 @@ a {
 	margin: 5px;
 }
 
-#select-meny * {
+#navigation-select-meny * {
 	background-color: var(--darker-color);
 	color: var(--lightest-color);
 }
 
-#no-value {
+#navigation-select-no-value {
 	color: transparent;
 }
 
@@ -162,7 +162,7 @@ header {
 	max-width: 340px;
 	border-radius: 18px;
 }
-#en-linje {
+#header-linje {
 	height: 1px;
 	max-width: 320px;
 	background-color: var(--lightest-color);
@@ -181,7 +181,7 @@ header {
 	margin: 0;
 	color: var(--light-color);
 }
-.textdiv {
+.main-section12-textdiv {
 	position: relative;
 	box-sizing: border-box;
 	min-height: 50vh;
@@ -189,46 +189,31 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	padding: 50px;
-	background: var(--main-color) url("bilder/Tassmedium.png");
+	background-color: var(--main-color);
+	background-image: linear-gradient(
+			var(--main-color-filter2),
+			var(--main-color-filter2)
+		),
+		url("bilder/Tassmedium.png");
 	background-size: 10%;
 }
 
-.textdiv button {
+.main-section12-textdiv button {
 	background-color: var(--complement-color);
 	color: var(--darker-color);
 	width: 100px;
 	align-self: self-end;
 }
 
-.textdiv button:hover {
+.main-section12-textdivbutton:hover {
 	background-color: var(--light-color);
 }
-/* filter mellan backgroundsbilden och textelementet med hjälp av pseudoklass */
-.textdiv::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--main-color-filter2);
-	z-index: 0;
-}
 
-.textdiv > * {
-	position: relative;
-	z-index: 1;
-}
-
-.textdiv h1 {
-	margin: 0;
-}
-
-.imgdiv {
+.main-section12-imgdiv {
 	min-height: 50vh;
 	background-size: cover;
 }
-#imgid1 {
+#main-section12-imgid1 {
 	position: relative;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -247,7 +232,7 @@ header {
 	margin: 0;
 	color: var(--light-color);
 }
-#imgid2 {
+#main-section12-imgid2 {
 	position: relative;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -255,9 +240,20 @@ header {
 			var(--medium-color1-filter)
 		),
 		url("bilder/Small/meetingSheepS.jpeg");
-	background-position: center;
+	background-position: bottom 0% right 20%;
 }
-
+/*-----------Sektion-Test----------------- */
+#sektion-test {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	color: var(--light-color);
+}
+#sektion-test img {
+	min-height: 50vh;
+	max-width: 100%;
+	object-fit: cover;
+}
 /*--------------sektion3-----------*/
 #head3-h2 {
 	overflow: hidden;
@@ -270,10 +266,11 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
+
 	text-align: center;
 }
-.background-image {
+
+.section-3-background-image {
 	position: fixed;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -398,6 +395,13 @@ header {
 #adress p {
 	margin: 0px;
 }
+#google-link {
+	float: right;
+}
+#google-link img {
+	width: 40px;
+	height: 40px;
+}
 /*--------Footer-----------*/
 footer {
 	background-color: var(--main-color);
@@ -405,12 +409,17 @@ footer {
 	text-align: center;
 	padding: 10px;
 }
+footer img {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+}
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 	#navlist {
 		display: flex;
 	}
-	#select-meny {
+	#navigation-select-meny {
 		display: none;
 	}
 	#navimg-tass {
@@ -454,10 +463,9 @@ footer {
 		color: var(--light-color);
 		margin-left: 10vw;
 		filter: Blur(0px);
-
 		animation: blurring 3s ease;
 	}
-	#en-linje {
+	#header-linje {
 		background-color: var(--complement-color);
 	}
 	/* la till en skojig välkommst effekt */
@@ -484,28 +492,34 @@ footer {
 	#sektion-2 {
 		flex-direction: row-reverse;
 	}
-	.textdiv {
+
+	.main-section12-textdiv {
 		padding: 50px;
-	}
-	.imgdiv {
 		width: 50vw;
 	}
-	.textdiv {
+	.main-section12-imgdiv {
 		width: 50vw;
 	}
-	#imgid1 {
+
+	#main-section12-imgid1 {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
 			),
 			url("bilder/larger/EBulldogRunnignL.jpeg");
 	}
-	#imgid2 {
+	#main-section12-imgid2 {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
 			),
 			url("bilder/larger/meetingsSheepL.jpeg");
+	}
+
+	/*----- TEST SEKTION-----*/
+	#sektion-test {
+		display: flex;
+		flex-direction: row;
 	}
 	/*-------------sektion-3 ------------*/
 
@@ -521,12 +535,26 @@ footer {
 		align-items: stretch;
 		gap: 20px;
 	}
-	.background-image {
+	.section-3-background-image {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
 			),
 			url("bilder/larger/bridgeL.jpeg");
+	}
+	#sektion-test {
+		flex-direction: row;
+		min-height: 50vh;
+	}
+	#sektion-test div {
+		box-sizing: border-box;
+		width: 50lvw;
+	}
+	#sektion-test img {
+		box-sizing: border-box;
+		width: 50lvw;
+		height: auto;
+		object-fit: cover;
 	}
 
 	/*--- tack till http://www.java2s.com/example/html-css/css-layout/change-the-order-of-flex-items-when-they-wrap.html för lösningen till att byta ordning wid wrap*/
