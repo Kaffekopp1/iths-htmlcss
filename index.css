@@ -150,13 +150,23 @@ header {
 	background-size: cover;
 	margin: 0;
 }
-@media (-webkit-min-device-pixel-ratio: 1) {
+
+@media (-webkit-min-device-pixel-ratio: 2) {
 	header {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
 			),
-			url("bilder/Small/dogsnowcover360.jpeg");
+			url("bilder/medium/dogsnowcover720.jpeg");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+	header {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/large/dogsnowcover1080.jpeg");
 	}
 }
 /* header {
