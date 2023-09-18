@@ -366,7 +366,7 @@ header {
 		url("bilder/Small/bridgeS.jpeg");
 	background-position: bottom 50% right 50%;
 	width: 100vw;
-	height: 100svh;
+	height: 100vh;
 	top: 0;
 	z-index: -1;
 	background-size: cover;
