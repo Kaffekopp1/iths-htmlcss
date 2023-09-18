@@ -53,10 +53,10 @@
 			<div id="header-text-container">
 				<div id="h1-img-container">
 					<h2>TASSENS HUNDDAGIS</h2>
-					<!--Testar lite picture element-->
+					<!--Picture element för att byta färg på tass ikonen-->
 					<picture id="pictures">
-						<source media="(min-width: 500px)" srcset="bilder/Tass.png" />
-						<source media="(max-width: 500px)" srcset="bilder/tassDark.png" />
+						<source media="(min-width: 600px)" srcset="bilder/Tass.png" />
+						<source media="(max-width: 600px)" srcset="bilder/tassDark.png" />
 						<img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
 					</picture>
 				</div>
@@ -100,7 +100,8 @@
 				</div>
 				<div class="main-section12-imgdiv" id="main-section12-imgid2"></div>
 			</section>
-			<section id="sektion-test">
+			<!--Jag ville använda srcset på en bild likt nedan därför är den sista sektionen annorlunda från de två övre.-->
+			<section id="sektion-vet">
 				<div class="main-section12-textdiv">
 					<h2>Veterinär</h2>
 					<p>
@@ -174,13 +175,14 @@
 				<section id="slutsektion">
 					<section class="om-oss" id="omoss">
 						<h2>Möt Vårt Passionerade Team</h2>
+						<!--Eftersom bredden på bilden är satt till 200px, är s 200px l 400px och xl 600px-->
 						<img
+							src="bilder/Small/personal200.jpeg"
 							srcset="
-								bilder/Small/personalS.jpeg  1x,
-								bilder/larger/personalL.jpeg 2x,
-								bilder/larger/personalL.jpeg 3x
+								bilder/Small/personal200.jpeg  1x,
+								bilder/medium/personal400.jpeg 2x,
+								bilder/large/personal600.jpeg  3x
 							"
-							src="bilder/Small/personalS.jpeg"
 							alt="bild-Personal"
 						/>
 						<p>

@@ -6,6 +6,7 @@
 	--medium-color2: #1c498c;
 	--main-color: #143566;
 	--main-color-filter2: #143566e3;
+	--main-color-filter3: #b8c9e3f0;
 	/* --medium-color1-filter: #1435667d; */
 	--medium-color1-filter: #1435663d;
 	--darker-color: #111e33;
@@ -144,11 +145,47 @@ header {
 			var(--medium-color1-filter),
 			var(--medium-color1-filter)
 		),
-		url("bilder/Small/staffordSnowS.jpeg");
+		url("bilder/Small/dogsnowcover360.jpeg");
 	background-position: center;
 	background-size: cover;
 	margin: 0;
 }
+@media (-webkit-min-device-pixel-ratio: 1) {
+	header {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/Small/dogsnowcover360.jpeg");
+	}
+}
+/* header {
+	display: flex;
+	min-height: 100svh;
+	max-height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: no-repeat center/cover
+			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+		url("bilder/Small/dogsnowcover360.jpeg");
+	margin: 0;
+} */
+/* @media (-webkit-min-device-pixel-ratio: 2) {
+	header {
+		background: var(--main-color),
+			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+			url("bilder/Small/dogsnowcover720.jpeg") center/cover;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+	header {
+		background: var(--main-color),
+			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+			url("bilder/Small/dogsnowcover1080.jpeg") center/cover;
+	}
+} */
 #h1-img-container {
 	display: flex;
 	align-items: center;
@@ -220,36 +257,85 @@ header {
 			var(--medium-color1-filter),
 			var(--medium-color1-filter)
 		),
-		url("bilder/Small/EBulldogRunningS.jpeg");
+		url("bilder/Small/EbulldogM360.jpeg");
 
 	background-position: bottom 60% right 0%;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+	#main-section12-imgid1 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/medium/EbulldogM720.jpeg");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+	#main-section12-imgid1 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/large/EbulldogM1080.jpeg");
+	}
 }
 
 /*-----------Sektion 2--------- */
 #sektion-2 {
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	color: var(--light-color);
 }
+#sektion-2 .main-section12-textdiv {
+	background-color: var(--light-color);
+	background-image: linear-gradient(
+			var(--main-color-filter3),
+			var(--main-color-filter3)
+		),
+		url(bilder/Tassljusare.png);
+	color: var(--darker-color);
+}
 #main-section12-imgid2 {
+	box-sizing: border-box;
 	position: relative;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
 			var(--medium-color1-filter),
 			var(--medium-color1-filter)
 		),
-		url("bilder/Small/meetingSheepS.jpeg");
-	background-position: bottom 0% right 20%;
+		url("bilder/Small/meetingM360.jpeg");
+	background-position: bottom 50% right 20%;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+	#main-section12-imgid2 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/medium/meetingm720.jpeg");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+	#main-section12-imgid2 {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/large/meeting1080.jpeg");
+	}
 }
 /*-----------Sektion-Test----------------- */
-#sektion-test {
+#sektion-vet {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	color: var(--light-color);
 }
-#sektion-test img {
+
+#sektion-vet img {
+	box-sizing: border-box;
 	min-height: 50vh;
 	max-width: 100%;
 	object-fit: cover;
@@ -495,10 +581,10 @@ footer img {
 
 	.main-section12-textdiv {
 		padding: 50px;
-		width: 50vw;
+		width: 50%;
 	}
 	.main-section12-imgdiv {
-		width: 50vw;
+		width: 50%;
 	}
 
 	#main-section12-imgid1 {
@@ -516,10 +602,13 @@ footer img {
 			url("bilder/larger/meetingsSheepL.jpeg");
 	}
 
-	/*----- TEST SEKTION-----*/
+	/*----- TEST SEKTION----- ------------------------------------------------------*/
 	#sektion-test {
 		display: flex;
 		flex-direction: row;
+	}
+	#sektion-test img {
+		max-width: 50%;
 	}
 	/*-------------sektion-3 ------------*/
 
@@ -542,15 +631,15 @@ footer img {
 			),
 			url("bilder/larger/bridgeL.jpeg");
 	}
-	#sektion-test {
+	#sektion-vet {
 		flex-direction: row;
 		min-height: 50vh;
 	}
-	#sektion-test div {
+	#sektion-vet div {
 		box-sizing: border-box;
 		width: 50lvw;
 	}
-	#sektion-test img {
+	#sektion-vet img {
 		box-sizing: border-box;
 		width: 50lvw;
 		height: auto;
