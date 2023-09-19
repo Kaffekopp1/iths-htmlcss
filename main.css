@@ -5,6 +5,7 @@
 	--medium-color2: #1c498c;
 	--main-color: #143566;
 	--main-color-filter2: #143566e3;
+	--main-color-filter3: #b8c9e3f0;
 	/* --medium-color1-filter: #1435667d; */
 	--medium-color1-filter: #1435663d;
 	--darker-color: #111e33;
@@ -63,4 +64,8 @@ textarea {
 ul {
 	list-style: none;
 	padding: 0;
+}
+
+address a {
+	color: var(--lightest-color);
 }

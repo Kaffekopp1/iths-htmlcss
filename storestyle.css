@@ -131,6 +131,7 @@ footer {
 	align-items: center;
 	background-color: var(--main-color);
 	color: var(--complement-color);
+	padding-bottom: 20px;
 }
 footer img {
 	margin: 10px;

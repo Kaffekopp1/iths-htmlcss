@@ -7,6 +7,10 @@
 	width: 100%;
 	overflow: hidden;
 }
+#tassikon {
+	width: 30px;
+	height: 30px;
+}
 
 #navlist {
 	padding: 0;
@@ -32,7 +36,6 @@ a {
 	text-decoration: none;
 	color: black;
 }
-
 /* ------------------Main------------ */
 main {
 	position: relative;
@@ -75,33 +78,7 @@ header {
 			url("bilder/large/dogsnowcover1080.jpeg");
 	}
 }
-/* header {
-				display: flex;
-				min-height: 100svh;
-				max-height: 100%;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				background: no-repeat center/cover
-				linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
-		url("bilder/Small/dogsnowcover360.jpeg");
-	margin: 0;
-} */
-/* @media (-webkit-min-device-pixel-ratio: 2) {
-	header {
-		background: var(--main-color),
-		linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
-		url("bilder/Small/dogsnowcover720.jpeg") center/cover;
-	}
-}
 
-@media (-webkit-min-device-pixel-ratio: 3) {
-	header {
-		background: var(--main-color),
-		linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
-		url("bilder/Small/dogsnowcover1080.jpeg") center/cover;
-	}
-} */
 /* ---------------------För att få en hamburger meny utan js------------------ */
 
 /*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
@@ -111,7 +88,7 @@ header {
 	width: 40px;
 	border-radius: 180px;
 	margin-left: 20px;
-	background-image: url("bilder/Tass500.png");
+	background-image: url("bilder/Hamburger.png");
 	background-position: center;
 	background-size: 80%;
 	background-repeat: no-repeat;
@@ -138,7 +115,7 @@ header {
 
 #header-text-container {
 	/* display: flex;
-	flex-direction: column; */
+				flex-direction: column; */
 	background-color: var(--light-color);
 	margin: 50px;
 	margin-top: 150px;
@@ -173,6 +150,7 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	padding: 50px;
+
 	background-color: var(--main-color);
 	background-image: linear-gradient(
 			var(--main-color-filter2),
@@ -208,6 +186,7 @@ header {
 
 	background-position: bottom 60% right 0%;
 }
+
 @media (-webkit-min-device-pixel-ratio: 2) {
 	#main-section12-imgid1 {
 		background-image: linear-gradient(
@@ -255,6 +234,7 @@ header {
 		url("bilder/Small/meetingM360.jpeg");
 	background-position: bottom 50% right 20%;
 }
+
 @media (-webkit-min-device-pixel-ratio: 2) {
 	#main-section12-imgid2 {
 		background-image: linear-gradient(
@@ -299,8 +279,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	text-align: center;
 }
 
@@ -404,6 +383,9 @@ header {
 	margin-top: 10px;
 }
 .om-oss {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	box-sizing: border-box;
 	border-radius: 18px;
 	background-color: var(--light-color);
@@ -412,6 +394,7 @@ header {
 	margin: 20px;
 	min-height: 450px;
 	max-width: 350px;
+	text-align: left;
 }
 .om-oss > img {
 	width: 200px;
@@ -470,6 +453,9 @@ footer > div {
 		height: 20px;
 		width: 20px;
 		margin: 10px;
+	}
+	#tassikon {
+		display: none;
 	}
 
 	.lankar {
@@ -569,7 +555,7 @@ footer > div {
 	/*-------------sektion-3 ------------*/
 
 	.sektion-3 {
-		margin: 10px 0;
+		margin: 50px 0;
 		gap: 100px;
 	}
 	.review-container {
