@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="bilder/tassikon.png" />
 		<meta
 			name="description"
 			content="		Vi är stolta över att vara din pålitliga partner när det gäller att ta
@@ -24,32 +25,36 @@
 		<title>Tassen</title>
 	</head>
 	<body>
-		<nav id="navigationbar">
-			<!--hjälp av https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag -->
-
-			<select
-				aria-label="Sido-Länkar"
-				id="navigation-select-meny"
-				name="forma"
-				onchange="location = this.value;"
-			>
-				<option id="select-no-value" value="#select-meny">välj länk:</option>
-				<option value="#contact">kontakt</option>
-				<option value="#omoss">Om oss</option>
-				<option value="store.html">Affär</option>
-			</select>
-
-			<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
-			<ul id="navlist">
-				<li><a class="lankar" href="index.html">Hem</a></li>
-				<li><a id="testlank" class="lankar" href="#omoss">Om oss</a></li>
-				<li><a class="lankar" href="#contact">Kontakt</a></li>
-			</ul>
-			<a href="store.html">
-				<img id="navimg-store" src="bilder/vagnljus.png" alt="bild-kundvagn" />
-			</a>
-		</nav>
 		<header>
+			<nav id="navigationbar">
+				<!--hjälp av https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag -->
+
+				<select
+					aria-label="Sido-Länkar"
+					id="navigation-select-meny"
+					name="forma"
+					onchange="location = this.value;"
+				>
+					<option id="select-no-value" value="#select-meny">välj länk:</option>
+					<option value="#contact">kontakt</option>
+					<option value="#omoss">Om oss</option>
+					<option value="store.html">Affär</option>
+				</select>
+
+				<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
+				<ul id="navlist">
+					<li><a class="lankar" href="index.html">Hem</a></li>
+					<li><a id="testlank" class="lankar" href="#omoss">Om oss</a></li>
+					<li><a class="lankar" href="#contact">Kontakt</a></li>
+				</ul>
+				<a href="store.html">
+					<img
+						id="navimg-store"
+						src="bilder/vagnljus.png"
+						alt="bild-kundvagn"
+					/>
+				</a>
+			</nav>
 			<div id="header-text-container">
 				<div id="h1-img-container">
 					<h2>TASSENS HUNDDAGIS</h2>
@@ -82,7 +87,7 @@
 						upplevelse för vissa hundar, och därför tar vi oss tid att skapa en
 						lugn och positiv atmosfär.
 					</p>
-					<button>Köp</button>
+					<button>Boka</button>
 				</div>
 				<div class="main-section12-imgdiv" id="main-section12-imgid1"></div>
 			</section>
@@ -96,7 +101,7 @@
 						naturen eller föredrar avslappnade rundor i kvarteret, är vi här för
 						att se till att de får den motion och stimulans de behöver.
 					</p>
-					<button>Köp</button>
+					<button>Boka</button>
 				</div>
 				<div class="main-section12-imgdiv" id="main-section12-imgid2"></div>
 			</section>
@@ -109,7 +114,7 @@
 						en professionell veterinärtjänst för att säkerställa deras välmående
 						under hela vistelsen. Din hunds hälsa är vår högsta prioritet.
 					</p>
-					<button>Köp</button>
+					<button>Boka</button>
 				</div>
 				<img
 					src="bilder/Small/staffupsideS.jpeg"
@@ -221,28 +226,35 @@
 							></textarea>
 							<button>Skicka</button>
 						</form>
-						<section id="adress">
-							<a id="google-link" href="https://www.google.com/maps">
-								<img src="bilder/googlepin.png" alt="googlemaps logga" />
-							</a>
-							<h3>Kontakt:</h3>
-							<p>Sjögatan 42</p>
-							<p>923 43 Stadköping</p>
-							<p>070-04 95 992</p>
-							<p>email@email.com</p>
-						</section>
 					</div>
 				</section>
 			</section>
 		</main>
 		<footer>
-			<a href="index.html">
-				<img src="bilder/f_logo_RGB-Blue_58.png" alt="facebook logga" />
-			</a>
-			<a href="index.html">
-				<img src="bilder/Instagram_Glyph_Gradient.png" alt="instagram logga" />
-			</a>
-			<p>Pzemturis@gmail.com</p>
+			<section id="adress">
+				<a id="google-link" href="https://www.google.com/maps">
+					<img src="bilder/googlepin.png" alt="googlemaps logga" />
+				</a>
+				<h3>Kontakt:</h3>
+				<p>Sjögatan 42</p>
+				<p>923 43 Stadköping</p>
+				<p>070-04 95 992</p>
+				<p>email@email.com</p>
+			</section>
+			<div>
+				<div>
+					<a href="index.html">
+						<img src="bilder/f_logo_RGB-Blue_58.png" alt="logga-facebook" />
+					</a>
+					<a href="index.html">
+						<img
+							src="bilder/Instagram_Glyph_Gradient.png"
+							alt="logga-instagram"
+						/>
+					</a>
+				</div>
+				<p>Pzemturis@gmail.com</p>
+			</div>
 		</footer>
 	</body>
 </html>

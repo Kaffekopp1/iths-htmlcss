@@ -24,3 +24,43 @@ p {
 	src: url("./AgencyGothicCT-Light.ttf");
 	font-display: swap;
 }
+
+/*på body overflow-x hidden på grund av animationen*/
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: roboL, sans-serif;
+	background-color: var(--medium-color1);
+	margin: 0;
+}
+
+/* den vanliga blå färgen på alt blev svår att se mot min bakgrund på vissa skärmar*/
+img {
+	color: white;
+}
+h1,
+h2 {
+	font-family: AgencyG, sans-serif;
+	font-size: xx-large;
+}
+
+button {
+	float: right;
+	/* align-self: flex-end; */
+	background-color: var(--main-color);
+	color: var(--light-color);
+	padding: 10px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+input {
+	background-color: var(--lightest-color);
+}
+textarea {
+	background-color: var(--lightest-color);
+}
+ul {
+	list-style: none;
+	padding: 0;
+}

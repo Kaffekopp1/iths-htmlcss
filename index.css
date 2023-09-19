@@ -1,68 +1,3 @@
-/*----------------gäller alla----------- */
-:root {
-	--lightest-color: #e6ecf5;
-	--light-color: #b8c9e3;
-	--medium-color1: #2d75e1;
-	--medium-color2: #1c498c;
-	--main-color: #143566;
-	--main-color-filter2: #143566e3;
-	--main-color-filter3: #b8c9e3f0;
-	/* --medium-color1-filter: #1435667d; */
-	--medium-color1-filter: #1435663d;
-	--darker-color: #111e33;
-	--complement-color: #e0a42d;
-}
-@font-face {
-	font-family: "roboL";
-	src: url(./Roboto-Light.ttf);
-	font-display: swap;
-}
-p {
-	font-family: "Courier New", Courier, monospace, sans-serif;
-}
-
-@font-face {
-	font-family: "AgencyG";
-	src: url("./AgencyGothicCT-Light.ttf");
-	font-display: swap;
-}
-
-/*på body overflow-x hidden på grund av animationen*/
-
-body {
-	margin: 0;
-	overflow-x: hidden;
-	font-family: roboL, sans-serif;
-}
-
-h1,
-h2,
-h3 {
-	font-family: AgencyG, sans-serif;
-	font-size: xx-large;
-	letter-spacing: 0.05em;
-}
-button {
-	float: right;
-	background-color: var(--main-color);
-	color: var(--light-color);
-	padding: 10px;
-	border-radius: 8px;
-	border: none;
-	cursor: pointer;
-}
-
-button:hover {
-	background-color: var(--light-color);
-	color: var(--darker-color);
-}
-
-input {
-	background-color: var(--lightest-color);
-}
-textarea {
-	background-color: var(--lightest-color);
-}
 /* -------------Navbar--------------------- */
 #navigationbar {
 	background-color: var(--main-color);
@@ -98,35 +33,6 @@ a {
 	color: black;
 }
 
-/* ---------------------För att få en hamburger meny utan js------------------ */
-
-/*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
-#navigation-select-meny {
-	background-color: var(--dark-color);
-	height: 40px;
-	width: 40px;
-	border-radius: 180px;
-	margin-left: 20px;
-	background-image: url("bilder/Tass500.png");
-	background-position: center;
-	background-size: 80%;
-	background-repeat: no-repeat;
-	appearance: none;
-	cursor: pointer;
-	border: none;
-	color: transparent;
-	margin: 5px;
-}
-
-#navigation-select-meny * {
-	background-color: var(--darker-color);
-	color: var(--lightest-color);
-}
-
-#navigation-select-no-value {
-	color: transparent;
-}
-
 /* ------------------Main------------ */
 main {
 	position: relative;
@@ -138,7 +44,7 @@ header {
 	min-height: 100svh;
 	max-height: 100%;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -170,32 +76,60 @@ header {
 	}
 }
 /* header {
-	display: flex;
-	min-height: 100svh;
-	max-height: 100%;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: no-repeat center/cover
-			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+				display: flex;
+				min-height: 100svh;
+				max-height: 100%;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background: no-repeat center/cover
+				linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
 		url("bilder/Small/dogsnowcover360.jpeg");
 	margin: 0;
 } */
 /* @media (-webkit-min-device-pixel-ratio: 2) {
 	header {
 		background: var(--main-color),
-			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
-			url("bilder/Small/dogsnowcover720.jpeg") center/cover;
+		linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+		url("bilder/Small/dogsnowcover720.jpeg") center/cover;
 	}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3) {
 	header {
 		background: var(--main-color),
-			linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
-			url("bilder/Small/dogsnowcover1080.jpeg") center/cover;
+		linear-gradient(var(--medium-color1-filter), var(--medium-color1-filter)),
+		url("bilder/Small/dogsnowcover1080.jpeg") center/cover;
 	}
 } */
+/* ---------------------För att få en hamburger meny utan js------------------ */
+
+/*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
+#navigation-select-meny {
+	background-color: var(--dark-color);
+	height: 40px;
+	width: 40px;
+	border-radius: 180px;
+	margin-left: 20px;
+	background-image: url("bilder/Tass500.png");
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	appearance: none;
+	cursor: pointer;
+	border: none;
+	color: transparent;
+	margin: 5px;
+}
+
+#navigation-select-meny * {
+	background-color: var(--darker-color);
+	color: var(--lightest-color);
+}
+
+#navigation-select-no-value {
+	color: transparent;
+}
 #h1-img-container {
 	display: flex;
 	align-items: center;
@@ -203,8 +137,11 @@ header {
 }
 
 #header-text-container {
+	/* display: flex;
+	flex-direction: column; */
 	background-color: var(--light-color);
 	margin: 50px;
+	margin-top: 150px;
 	padding: 20px;
 	max-width: 340px;
 	border-radius: 18px;
@@ -363,6 +300,7 @@ header {
 	align-items: center;
 	justify-content: center;
 
+	margin-bottom: 20px;
 	text-align: center;
 }
 
@@ -467,7 +405,6 @@ header {
 }
 .om-oss {
 	box-sizing: border-box;
-	background-color: var(--darker-color);
 	border-radius: 18px;
 	background-color: var(--light-color);
 	color: var(--darker-color);
@@ -481,11 +418,27 @@ header {
 	height: 200px;
 	border-radius: 10px;
 }
+
+/*--------Footer-----------*/
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-color);
+	color: var(--complement-color);
+}
+footer img {
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+}
 #adress {
 	text-align: left;
 	color: var(--light-color);
 	border: dotted var(--complement-color);
 	margin-bottom: 20px;
+	margin-top: 20px;
 	padding: 10px;
 }
 #adress p {
@@ -498,19 +451,13 @@ header {
 	width: 40px;
 	height: 40px;
 }
-/*--------Footer-----------*/
-footer {
-	background-color: var(--main-color);
-	color: var(--complement-color);
-	text-align: center;
-	padding: 10px;
+footer > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-footer img {
-	width: 30px;
-	height: 30px;
-	margin: 10px;
-}
-
+/*---------------------------------------------LARGE-------------------*/
 @media screen and (min-width: 600px) {
 	#navlist {
 		display: flex;
@@ -538,7 +485,6 @@ footer img {
 
 	header {
 		flex-direction: column;
-		justify-content: center;
 		align-items: start;
 		background-color: var(--medium-color1);
 		background-image: linear-gradient(
@@ -641,6 +587,7 @@ footer img {
 			),
 			url("bilder/larger/bridgeL.jpeg");
 		height: 100vh;
+		width: 100vw;
 	}
 	#sektion-vet {
 		flex-direction: row;
@@ -676,5 +623,11 @@ footer img {
 
 	.form-container {
 		width: 350px;
+	}
+	footer {
+		flex-direction: row;
+	}
+	footer > div {
+		margin: 20px;
 	}
 }
