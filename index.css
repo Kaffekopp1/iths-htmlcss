@@ -5,7 +5,6 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
 }
 #tassikon {
 	width: 30px;
@@ -82,7 +81,7 @@ header {
 /* ---------------------För att få en hamburger meny utan js------------------ */
 
 /*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
-#navigation-select-meny {
+#hamburgare-select-meny {
 	background-color: var(--dark-color);
 	height: 40px;
 	width: 40px;
@@ -99,12 +98,12 @@ header {
 	margin: 5px;
 }
 
-#navigation-select-meny * {
+#hamburgare-select-meny * {
 	background-color: var(--darker-color);
 	color: var(--lightest-color);
 }
 
-#navigation-select-no-value {
+#hamburgare-select-no-value {
 	color: transparent;
 }
 #h1-img-container {
@@ -253,7 +252,7 @@ header {
 			url("bilder/large/meeting1080.jpeg");
 	}
 }
-/*-----------Sektion-Test----------------- */
+/*-----------Sektion-Vet----------------- */
 #sektion-vet {
 	display: flex;
 	flex-direction: column;
@@ -442,10 +441,14 @@ footer > div {
 }
 /*---------------------------------------------LARGE-------------------*/
 @media screen and (min-width: 600px) {
+	#navigationbar {
+		overflow: hidden;
+	}
 	#navlist {
 		display: flex;
+		height: 100%;
 	}
-	#navigation-select-meny {
+	#hamburgare-select-meny {
 		display: none;
 	}
 	#navimg-tass {
@@ -459,6 +462,7 @@ footer > div {
 	}
 
 	.lankar {
+		box-sizing: border-box;
 		color: var(--light-color);
 		height: 100%;
 		padding: 20px;
@@ -483,7 +487,7 @@ footer > div {
 		background-position: bottom 0% right 40%;
 		background-size: cover;
 		min-height: calc(100vh - 40px);
-		animation: zoomer 3s ease;
+		/* animation: zoomer 3s ease; */
 	}
 
 	#header-text-container {
@@ -544,12 +548,12 @@ footer > div {
 			url("bilder/larger/meetingsSheepL.jpeg");
 	}
 
-	/*----- TEST SEKTION----- ------------------------------------------------------*/
-	#sektion-test {
+	/*----- TEST Vet----- ------------------------------------------------------*/
+	#sektion-vet {
 		display: flex;
 		flex-direction: row;
 	}
-	#sektion-test img {
+	#sektion-vet img {
 		max-width: 50%;
 	}
 	/*-------------sektion-3 ------------*/
@@ -590,7 +594,6 @@ footer > div {
 		object-fit: cover;
 	}
 
-	/*--- tack till http://www.java2s.com/example/html-css/css-layout/change-the-order-of-flex-items-when-they-wrap.html för lösningen till att byta ordning wid wrap*/
 	.slutsektionr > div {
 		flex-shrink: 0;
 	}
