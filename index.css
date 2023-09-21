@@ -104,6 +104,7 @@ a {
 #hero-headingandimg-container {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	margin: 0;
 }
 #header-text-container {
@@ -119,11 +120,10 @@ a {
 #header-linje {
 	height: 1px;
 	max-width: 320px;
-	background-color: var(--lightest-color);
+	background-color: var(--darker-color);
 }
 
 .tass-i-text {
-	margin-left: 20px;
 	width: 40px;
 	height: 40px;
 }
@@ -175,6 +175,7 @@ main {
 	flex-direction: column;
 	margin: 0;
 	color: var(--light-color);
+	/* overflow: hidden; */
 }
 
 #sektion-services-imgbulldog {
@@ -185,9 +186,14 @@ main {
 			var(--medium-color1-filter)
 		),
 		url("bilder/Small/EbulldogM360.jpeg");
-
 	background-position: bottom 60% right 0%;
+	/* scale: 1;
+	transition: all 2s; */
 }
+/* #sektion-services-imgbulldog:hover {
+	transition: all 2s;
+	scale: 1.1;
+} */
 
 @media (-webkit-min-device-pixel-ratio: 2) {
 	#sektion-services-imgbulldog {
@@ -467,7 +473,10 @@ address {
 		background-position: bottom 0% right 40%;
 		background-size: cover;
 		min-height: 100vh;
-		animation: 2s ease zoomer;
+		/* animation: 1s ease zoomer; */
+		/* animation: zoomer 5s linear infinite; */
+		/* -webkit-animation: zoomer 2s linear forwards;
+		animation: zoomer 2s linear forwards; */
 	}
 	/* la till en skojig välkommst effekt */
 	@keyframes blurring {
@@ -478,14 +487,7 @@ address {
 			filter: Blur(0px);
 		}
 	}
-	@keyframes zoomer {
-		0% {
-			background-position: bottom 0% right 0%;
-		}
-		100% {
-			background-position: bottom 0% right 40%;
-		}
-	}
+
 	/* -------------Navbar--------------------- */
 	#navigationbar {
 		overflow: hidden;

@@ -60,10 +60,10 @@ header h1 {
 	color: var(--light-color);
 	border-radius: 20px;
 	height: 500px;
-	width: 200px;
+	width: 300px;
 	text-align: left;
 	padding: 20px;
-	border-radius: 0px 30px 0px 30px;
+	border-radius: 0px 190px 0px 160px;
 	border: solid var(--complement-color);
 
 	margin: 10px;
@@ -179,6 +179,8 @@ footer > div {
 	}
 	.erbjudanden {
 		margin: 0;
+		width: 200px;
+		border-radius: 0px 120px 0px 120px;
 	}
 	#background-image-store {
 		background-size: 80%;

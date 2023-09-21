@@ -42,9 +42,91 @@
 			fieldset {
 				background-color: yellow;
 			}
+			#container {
+				height: 100vh;
+				background-color: blue;
+				margin: 0;
+			}
+			#inner {
+				margin-top: 40px;
+				height: 20px;
+				background-color: green;
+			}
+			#ytter {
+				height: 20px;
+				background-color: green;
+			}
+
+			/* dropdown  */
+			.dropbtn {
+				background-color: #04aa6d;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+			}
+
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f1f1f1;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #ddd;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			.dropdown:hover .dropbtn {
+				background-color: #3e8e41;
+			}
 		</style>
 	</head>
 	<body>
+		<h2>Hoverable Dropdown</h2>
+		<p>Move the mouse over the button to open the dropdown menu.</p>
+
+		<div class="dropdown">
+			<button class="dropbtn">Dropdown</button>
+			<div class="dropdown-content">
+				<ul>
+					<li>
+						<a href="#">Link 1</a>
+					</li>
+					<li>
+						<a href="#">Link 2 </a>
+					</li>
+					<li>
+						<a href="#">Link 3</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="ytter"></div>
+		<!--
+		<div id="container">
+			<div id="inner"></div>
+		</div> -->
+
 		<select id="select-meny" name="forma" onchange="location = this.value;">
 			<option value="#contact"></option>
 			<option value="#contact">kontakt</option>
