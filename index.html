@@ -9,29 +9,25 @@
 			content=" Vi är stolta över att vara din pålitliga
 		partner när det gäller att ta hand om din fyrbenta familjemedlem."
 		/>
-
-		<!-- förladdar bilden med en "high" prioritet så den laddar samtidigt som stylesheet. -->
-		<!-- <link
-			rel="preload"
-			as="image"
-			href="bilder/Small/staffordSnowS.jpeg"
-			type="image/webp"
-		/> -->
 		<link rel="stylesheet" href="main.css" />
 		<link rel="stylesheet" href="index.css" />
 
 		<title>Tassen</title>
 	</head>
 	<body>
+		<!----------------------Header/Hero start---------------------------------->
 		<header>
+			<!-----------------------------------navbar start------------------------>
 			<nav id="navigationbar">
-				<!-- Hamburger meny utan
-					hjälp av https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag -->
-
+				<!-- Hamburger meny utan js hjälp av
+					https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag
+					jag la in detta för att stilla min egen nyfikenhet ifall/hur det gick att göra
+					utan js.
+				-->
 				<select
 					aria-label="Sido-Länkar"
 					id="hamburgare-select-meny"
-					name="forma"
+					name="hamburger"
 					onchange="location = this.value;"
 				>
 					<option id="hamburgare-select-no-value" value="#select-meny">
@@ -41,7 +37,7 @@
 					<option value="#omoss">Om oss</option>
 					<option value="store.html">Affär</option>
 				</select>
-
+				<!--------------------------hamburgermeny stop------------------------->
 				<img src="bilder/Tassljusare.png" alt="tassikon" id="tassikon" />
 				<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
 				<ul id="navlist">
@@ -57,11 +53,14 @@
 					/>
 				</a>
 			</nav>
+			<!-----------------------------------navbar stop------------------------->
+			<!-----------------------------------HERO-Start-------------------------->
 			<div id="header-text-container">
-				<div id="h1-img-container">
+				<div id="hero-headingandimg-container">
 					<h2>TASSENS HUNDDAGIS</h2>
-					<!--Picture element för att byta färg på tass ikonen-->
-					<picture id="pictures">
+					<!--Picture element för att byta färg
+						på tass ikonen beroende på storlek-->
+					<picture id="hero-ikone-pictures">
 						<source media="(min-width: 600px)" srcset="bilder/Tass.png" />
 						<source media="(max-width: 600px)" srcset="bilder/tassDark.png" />
 						<img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
@@ -77,66 +76,91 @@
 
 				<button>Erbjudanden</button>
 			</div>
+			<!------------------------HERO-End--------------------------------------->
 		</header>
+		<!----------------------Header/Hero end----------------------------------->
+		<!----------------------Main-start----------------------------------------->
 		<main>
-			<section id="sektion-1">
-				<div class="main-section12-textdiv">
-					<h2>Kloklippning med Kärlek och Omsorg</h2>
-					<p>
-						Ge din hunds tassar den kärlek de förtjänar. Våra erfarna och
-						skickliga hundfrisörer ser till att din hunds klor är klippta på ett
-						säkert och bekvämt sätt. Vi förstår att detta kan vara en skrämmande
-						upplevelse för vissa hundar, och därför tar vi oss tid att skapa en
-						lugn och positiv atmosfär.
-					</p>
-					<button>Boka</button>
-				</div>
-				<div class="main-section12-imgdiv" id="main-section12-imgid1"></div>
+			<!---------------------------services start------------------------------>
+			<section aria-labelledby="services-heading">
+				<h2 id="services-heading" class="aria-label">Tjänster som erbjuds</h2>
+				<section id="sektion-kloklippning">
+					<div class="sektion-services-textdiv">
+						<h2>Kloklippning med Kärlek och Omsorg</h2>
+						<p>
+							Ge din hunds tassar den kärlek de förtjänar. Våra erfarna och
+							skickliga hundfrisörer ser till att din hunds klor är klippta på
+							ett säkert och bekvämt sätt. Vi förstår att detta kan vara en
+							skrämmande upplevelse för vissa hundar, och därför tar vi oss tid
+							att skapa en lugn och positiv atmosfär.
+						</p>
+						<button>Boka</button>
+					</div>
+					<div
+						class="sektion-services-imgdiv"
+						id="sektion-services-imgbulldog"
+					></div>
+				</section>
+				<section id="sektion-promenad">
+					<div class="sektion-services-textdiv">
+						<h2>Personliga Promenader som Anpassas efter Din Hund</h2>
+						<p>
+							Varje hund är unik, och våra professionella hundvandrare förstår
+							det väl. Vi skapar skräddarsydda promenader som passar din hunds
+							behov och energinivå. Oavsett om din vovve älskar lekfulla
+							strövtåg i naturen eller föredrar avslappnade rundor i kvarteret,
+							är vi här för att se till att de får den motion och stimulans de
+							behöver.
+						</p>
+						<button>Boka</button>
+					</div>
+					<div
+						class="sektion-services-imgdiv"
+						id="sektion-services-meeting"
+					></div>
+				</section>
+				<!--Jag ville testa att använda srcset på en bild likt nedan
+					därför är den sista sektionen annorlunda från de två övre.-->
+				<section id="sektion-vet">
+					<div class="sektion-services-textdiv">
+						<h2>Veterinär</h2>
+						<p>
+							På vårt hunddagis prioriterar vi din hunds hälsa. Vi
+							tillhandahåller en professionell veterinärtjänst för att
+							säkerställa deras välmående under hela vistelsen. Din hunds hälsa
+							är vår högsta prioritet.
+						</p>
+						<button>Boka</button>
+					</div>
+					<img
+						src="bilder/Small/staffupsideS.jpeg"
+						srcset="
+							bilder/Small/staffupsideS.jpeg    800w,
+							bilder/larger/staffupsideL.jpg   1200w,
+							bilder/larger/staffupdsideXL.jpg 1600w
+						"
+						sizes="(min-width: 600px) 50vw, 100vw"
+						alt="bild-Hund liggandes upp och ned"
+					/>
+				</section>
 			</section>
-			<section id="sektion-2">
-				<div class="main-section12-textdiv">
-					<h2>Personliga Promenader som Anpassas efter Din Hund</h2>
-					<p>
-						Varje hund är unik, och våra professionella hundvandrare förstår det
-						väl. Vi skapar skräddarsydda promenader som passar din hunds behov
-						och energinivå. Oavsett om din vovve älskar lekfulla strövtåg i
-						naturen eller föredrar avslappnade rundor i kvarteret, är vi här för
-						att se till att de får den motion och stimulans de behöver.
-					</p>
-					<button>Boka</button>
-				</div>
-				<div class="main-section12-imgdiv" id="main-section12-imgid2"></div>
-			</section>
-			<!--Jag ville använda srcset på en bild likt nedan därför är den sista sektionen annorlunda från de två övre.-->
-			<section id="sektion-vet">
-				<div class="main-section12-textdiv">
-					<h2>Veterinär</h2>
-					<p>
-						På vårt hunddagis prioriterar vi din hunds hälsa. Vi tillhandahåller
-						en professionell veterinärtjänst för att säkerställa deras välmående
-						under hela vistelsen. Din hunds hälsa är vår högsta prioritet.
-					</p>
-					<button>Boka</button>
-				</div>
-				<img
-					src="bilder/Small/staffupsideS.jpeg"
-					srcset="
-						bilder/Small/staffupsideS.jpeg    800w,
-						bilder/larger/staffupsideL.jpg   1200w,
-						bilder/larger/staffupdsideXL.jpg 1600w
-					"
-					sizes="(min-width: 600px) 50vw, 100vw"
-					alt="bild-Hund liggandes upp och ned"
-				/>
-				<!-- <img src="bilder/Small/bridgeS.jpeg" alt="" /> -->
-			</section>
+			<!---------------------------services end------------------------------>
+			<!-------------------reviewandcontact start---------------------------->
+			<section
+				aria-labelledby="reviewandconctact-heading"
+				class="sektion-reviewandcontact"
+			>
+				<div class="sektion-reviewandcontact-background-image"></div>
+				<h2
+					class="aria-label"
+					class="aria-label"
+					id="reviewandconctact-heading"
+				>
+					Omdöme och Kontakt
+				</h2>
 
-			<section aria-labelledby="head3-h2" class="sektion-3">
-				<div class="section-3-background-image"></div>
-				<h2 id="head3-h2">Omdöme och Kontakt</h2>
-
-				<section aria-labelledby="head-review-h2" class="review-container">
-					<h2 id="head-review-h2">Omdöme</h2>
+				<section aria-labelledby="review-heading" class="review-container">
+					<h2 class="aria-label" id="review-heading">Omdöme</h2>
 					<article class="review-div">
 						<div class="review-img" id="review-img1"></div>
 						<h3>Ruben</h3>
@@ -231,9 +255,12 @@
 					</div>
 				</section>
 			</section>
+			<!---------------------------reviewandcontact-end------------------------>
 		</main>
+		<!-----------------------------------------mainsection end----------------->
+		<!-----------------------------------------footer-start----------------->
 		<footer>
-			<section id="adress">
+			<section id="kontaktruta">
 				<a id="google-link" href="https://www.google.com/maps">
 					<img src="bilder/googlepin.png" alt="googlemaps logga" />
 				</a>
@@ -255,12 +282,14 @@
 						/>
 					</a>
 				</div>
-
-				<!-- http://192.168.3.20:5500/index.html -->
 				<address>
-					<a href="mailto:Pzemturis@gmail.com"> <p>Pzemturis@gmail.com</p> </a>
+					<a href="mailto:Pzemturis@gmail.com">
+						<p>Copyright &copy</p>
+						<p>Pzemturis@gmail.com</p>
+					</a>
 				</address>
 			</div>
 		</footer>
+		<!-----------------------------------------footer-end----------------->
 	</body>
 </html>

@@ -1,3 +1,5 @@
+/* färger i variabler pga kronisk ambivalens*/
+
 :root {
 	--lightest-color: #e6ecf5;
 	--light-color: #b8c9e3;
@@ -33,11 +35,13 @@ body {
 	font-family: roboL, sans-serif;
 	background-color: var(--medium-color1);
 	margin: 0;
+	overflow-x: hidden;
 }
 
-/* den vanliga blå färgen på alt blev svår att se mot min bakgrund på vissa skärmar*/
+/* den vanliga blå färgen som blir ifall bilden ej laddas
+  (alt) blev svår att se mot min bakgrund på vissa skärmar*/
 img {
-	color: white;
+	color: var(--lightest-color);
 }
 h1,
 h2 {
@@ -45,9 +49,11 @@ h2 {
 	font-size: xx-large;
 }
 
+/* här ville jag använda float:right pga av 1 rad kod i en regel istället för
+ 3 rader på både förälder och barnet, men hörde att det var big nono*/
 button {
-	float: right;
-	/* align-self: flex-end; */
+	/* float: right; */
+	align-self: flex-end;
 	background-color: var(--main-color);
 	color: var(--light-color);
 	padding: 10px;

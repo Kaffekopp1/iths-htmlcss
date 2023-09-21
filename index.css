@@ -1,46 +1,4 @@
-/* -------------Navbar--------------------- */
-#navigationbar {
-	background-color: var(--main-color);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-}
-#tassikon {
-	width: 30px;
-	height: 30px;
-}
-
-#navlist {
-	padding: 0;
-	display: none;
-}
-#navimg-store {
-	height: 20px;
-	width: 20px;
-	margin: 10px;
-}
-#navimg-tass {
-	display: none;
-}
-
-#navlist {
-	align-items: center;
-	list-style: none;
-}
-#navlist li {
-	margin: 0 12px;
-}
-a {
-	text-decoration: none;
-	color: black;
-}
-/* ------------------Main------------ */
-main {
-	position: relative;
-}
-
-/* --------HERO/Header --------- */
+/* --------------------HERO/Header Start ----------------------------- */
 header {
 	display: flex;
 	min-height: 100svh;
@@ -78,6 +36,43 @@ header {
 	}
 }
 
+/* --------------------------------------Navbar--------------------- */
+#navigationbar {
+	background-color: var(--main-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+#tassikon {
+	width: 30px;
+	height: 30px;
+}
+
+#navlist {
+	padding: 0;
+	display: none;
+}
+#navimg-store {
+	height: 20px;
+	width: 20px;
+	margin: 10px;
+}
+#navimg-tass {
+	display: none;
+}
+
+#navlist {
+	align-items: center;
+	list-style: none;
+}
+#navlist li {
+	margin: 0 12px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
 /* ---------------------För att få en hamburger meny utan js------------------ */
 
 /*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
@@ -106,15 +101,14 @@ header {
 #hamburgare-select-no-value {
 	color: transparent;
 }
-#h1-img-container {
+#hero-headingandimg-container {
 	display: flex;
 	align-items: center;
 	margin: 0;
 }
-
 #header-text-container {
-	/* display: flex;
-				flex-direction: column; */
+	display: flex;
+	flex-direction: column;
 	background-color: var(--light-color);
 	margin: 50px;
 	margin-top: 150px;
@@ -133,15 +127,13 @@ header {
 	width: 40px;
 	height: 40px;
 }
-
-/*-----------Sektion 1--------- */
-#sektion-1 {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	color: var(--light-color);
+/*--------------- header/hero end-------------*/
+/* ------------------Main-start------------ */
+main {
+	position: relative;
 }
-.main-section12-textdiv {
+/*-------------Services start ---------------*/
+.sektion-services-textdiv {
 	position: relative;
 	box-sizing: border-box;
 	min-height: 50vh;
@@ -149,7 +141,6 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	padding: 50px;
-
 	background-color: var(--main-color);
 	background-image: linear-gradient(
 			var(--main-color-filter2),
@@ -158,23 +149,29 @@ header {
 		url("bilder/Tassmedium.png");
 	background-size: 10%;
 }
-
-.main-section12-textdiv button {
+.sektion-services-textdiv button {
 	background-color: var(--complement-color);
 	color: var(--darker-color);
 	width: 100px;
 	align-self: self-end;
 }
-
-.main-section12-textdivbutton:hover {
+.sektion-services-textdivbutton:hover {
 	background-color: var(--light-color);
 }
 
-.main-section12-imgdiv {
+.sektion-services-imgdiv {
 	min-height: 50vh;
 	background-size: cover;
 }
-#main-section12-imgid1 {
+/*----------- kloklippning-start--------- */
+#sektion-kloklippning {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	color: var(--light-color);
+}
+
+#sektion-services-imgbulldog {
 	position: relative;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -187,7 +184,7 @@ header {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
-	#main-section12-imgid1 {
+	#sektion-services-imgbulldog {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
@@ -196,7 +193,7 @@ header {
 	}
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
-	#main-section12-imgid1 {
+	#sektion-services-imgbulldog {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
@@ -204,16 +201,17 @@ header {
 			url("bilder/large/EbulldogM1080.jpeg");
 	}
 }
+/*----------- kloklippning-end--------- */
 
-/*-----------Sektion 2--------- */
-#sektion-2 {
+/*-----------Promenad Start ---------------- */
+#sektion-promenad {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	color: var(--light-color);
 }
-#sektion-2 .main-section12-textdiv {
+#sektion-promenad .sektion-services-textdiv {
 	background-color: var(--light-color);
 	background-image: linear-gradient(
 			var(--main-color-filter3),
@@ -222,7 +220,7 @@ header {
 		url(bilder/Tassljusare.png);
 	color: var(--darker-color);
 }
-#main-section12-imgid2 {
+#sektion-services-meeting {
 	box-sizing: border-box;
 	position: relative;
 	background-color: var(--main-color);
@@ -235,7 +233,7 @@ header {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
-	#main-section12-imgid2 {
+	#sektion-services-meeting {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
@@ -244,7 +242,7 @@ header {
 	}
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
-	#main-section12-imgid2 {
+	#sektion-services-meeting {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
@@ -252,6 +250,7 @@ header {
 			url("bilder/large/meeting1080.jpeg");
 	}
 }
+/*-----------Promenad end ---------------- */
 /*-----------Sektion-Vet----------------- */
 #sektion-vet {
 	display: flex;
@@ -266,14 +265,16 @@ header {
 	width: 100%;
 	object-fit: cover;
 }
-/*--------------sektion3-----------*/
-#head3-h2 {
+/*-----------Sektion-end----------------- */
+/*-------------Services-end ---------------*/
+/*--------------sektion reviewandcontact-----------*/
+.aria-label {
 	overflow: hidden;
 	width: 0;
 	height: 0;
 	margin: 0;
 }
-.sektion-3 {
+.sektion-reviewandcontact {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -282,7 +283,7 @@ header {
 	text-align: center;
 }
 
-.section-3-background-image {
+.sektion-reviewandcontact-background-image {
 	position: fixed;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
@@ -297,7 +298,7 @@ header {
 	z-index: -1;
 	background-size: cover;
 }
-
+/*-----------------Review start---------------  */
 .review-container {
 	display: flex;
 	flex-direction: column;
@@ -305,12 +306,7 @@ header {
 	gap: 60px;
 	margin: 50px 0;
 }
-#head-review-h2 {
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	margin: 0;
-}
+
 .review-div {
 	position: relative;
 	display: flex;
@@ -321,10 +317,9 @@ header {
 	color: var(--light-color);
 	padding: 20px;
 	border-radius: 20px;
-	max-width: 80%;
 	text-align: left;
 	border: solid var(--complement-color);
-	max-width: 200px;
+	max-width: 250px;
 	margin-top: 50px;
 }
 
@@ -332,6 +327,7 @@ header {
 	flex-grow: 1;
 }
 .review-div > h3 {
+	margin-top: 40px;
 	margin-bottom: 0;
 }
 
@@ -359,6 +355,8 @@ header {
 	width: 207px;
 	height: 33px;
 }
+/*-----------------Review end---------------  */
+/*-----------------endsektion start---------------  */
 #slutsektion {
 	display: flex;
 	flex-direction: column;
@@ -400,12 +398,15 @@ header {
 	height: 200px;
 	border-radius: 10px;
 }
+/*-----------------endsektionend---------------  */
+/*--------------reviewandcontact-end----------*/
+/*--------------mainend----------*/
 
 /*--------Footer-----------*/
 footer {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	background-color: var(--main-color);
 	color: var(--complement-color);
@@ -415,7 +416,7 @@ footer img {
 	width: 30px;
 	height: 30px;
 }
-#adress {
+#kontaktruta {
 	text-align: left;
 	color: var(--light-color);
 	border: dotted var(--complement-color);
@@ -423,9 +424,10 @@ footer img {
 	margin-top: 20px;
 	padding: 10px;
 }
-#adress p {
+#kontaktruta p {
 	margin: 0px;
 }
+/* Ville här använda float right */
 #google-link {
 	float: right;
 }
@@ -439,8 +441,46 @@ footer > div {
 	align-items: center;
 	justify-content: center;
 }
-/*---------------------------------------------LARGE-------------------*/
+address {
+	display: flex;
+	text-align: center;
+}
+/*---------------------------------------------LARGE--------------------------*/
 @media screen and (min-width: 600px) {
+	/* --------HERO/Header Start ----------------------------- */
+	header {
+		align-items: start;
+		background-color: var(--medium-color1);
+		background-image: linear-gradient(
+				to right,
+				var(--darker-color),
+				80%,
+				var(--medium-color1-filter)
+			),
+			url("bilder/large/StaffordSnowL.jpeg");
+		background-position: bottom 0% right 40%;
+		background-size: cover;
+		min-height: 100vh;
+		animation: zoomer 3s ease;
+	}
+	/* la till en skojig välkommst effekt */
+	@keyframes blurring {
+		0% {
+			filter: Blur(10px);
+		}
+		80% {
+			filter: Blur(0px);
+		}
+	}
+	@keyframes zoomer {
+		0% {
+			background-position: bottom 0% right 60%;
+		}
+		100% {
+			background-position: bottom 0% right 40%;
+		}
+	}
+	/* -------------Navbar--------------------- */
 	#navigationbar {
 		overflow: hidden;
 	}
@@ -460,7 +500,6 @@ footer > div {
 	#tassikon {
 		display: none;
 	}
-
 	.lankar {
 		box-sizing: border-box;
 		color: var(--light-color);
@@ -472,23 +511,7 @@ footer > div {
 		color: var(--darker-color);
 		background-color: var(--light-color);
 	}
-
-	header {
-		flex-direction: column;
-		align-items: start;
-		background-color: var(--medium-color1);
-		background-image: linear-gradient(
-				to right,
-				var(--darker-color),
-				80%,
-				var(--medium-color1-filter)
-			),
-			url("bilder/larger/StaffordSnowL.jpeg");
-		background-position: bottom 0% right 40%;
-		background-size: cover;
-		min-height: calc(100vh - 40px);
-		/* animation: zoomer 3s ease; */
-	}
+	/* -------------Navbar end--------------------- */
 
 	#header-text-container {
 		background-color: transparent;
@@ -500,47 +523,33 @@ footer > div {
 	#header-linje {
 		background-color: var(--complement-color);
 	}
-	/* la till en skojig välkommst effekt */
-	@keyframes blurring {
-		0% {
-			filter: Blur(10px);
-		}
-		100% {
-			filter: Blur(0px);
-		}
-	}
-	@keyframes zoomer {
-		0% {
-			transform: scale(1.15, 1.15);
-		}
-		100% {
-			transform: scale(1, 1);
-		}
-	}
-	/*---------Sektion-2 ------------- */
-	#sektion-1 {
-		flex-direction: row;
-	}
-	#sektion-2 {
-		flex-direction: row-reverse;
-	}
-
-	.main-section12-textdiv {
+	/* --------HERO/Header End ----------------------------- */
+	/*---------------------------------------------Main-------------------------*/
+	/*-------------Services start ---------------*/
+	.sektion-services-textdiv {
 		padding: 50px;
 		width: 50%;
 	}
-	.main-section12-imgdiv {
+	.sektion-services-imgdiv {
 		width: 50%;
 	}
-
-	#main-section12-imgid1 {
+	/*-----------------------------Sektion-Kloklippning------------------------ */
+	#sektion-kloklippning {
+		flex-direction: row;
+	}
+	#sektion-services-imgbulldog {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
 			),
 			url("bilder/larger/EBulldogRunnignL.jpeg");
 	}
-	#main-section12-imgid2 {
+	/*-----------------------------Sektion-prommenad----------------------------*/
+	#sektion-promenad {
+		flex-direction: row-reverse;
+	}
+
+	#sektion-services-meeting {
 		background-image: linear-gradient(
 				var(--medium-color1-filter),
 				var(--medium-color1-filter)
@@ -548,41 +557,13 @@ footer > div {
 			url("bilder/larger/meetingsSheepL.jpeg");
 	}
 
-	/*----- TEST Vet----- ------------------------------------------------------*/
+	/*---------------------Sektion-Vet-----------------------------------------*/
 	#sektion-vet {
 		display: flex;
-		flex-direction: row;
-	}
-	#sektion-vet img {
-		max-width: 50%;
-	}
-	/*-------------sektion-3 ------------*/
-
-	.sektion-3 {
-		margin: 50px 0;
-		gap: 100px;
-	}
-	.review-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		flex-direction: row;
-		align-items: stretch;
-		gap: 20px;
-	}
-	.section-3-background-image {
-		background-image: linear-gradient(
-				var(--medium-color1-filter),
-				var(--medium-color1-filter)
-			),
-			url("bilder/larger/bridgeL.jpeg");
-		height: 100vh;
-		width: 100vw;
-	}
-	#sektion-vet {
 		flex-direction: row;
 		min-height: 50vh;
 	}
+
 	#sektion-vet div {
 		box-sizing: border-box;
 		width: 50lvw;
@@ -593,11 +574,39 @@ footer > div {
 		height: auto;
 		object-fit: cover;
 	}
+	/*-------------Services end ---------------*/
+	/*--------------sektion reviewandcontact start-----------*/
+	.sektion-reviewandcontact {
+		margin: 50px 0;
+		gap: 100px;
+	}
+	.sektion-reviewandcontact-background-image {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/larger/bridgeL.jpeg");
+		height: 100vh;
+		width: 100vw;
+	}
+	/*-----------------Review start---------------  */
+	.review-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
+		align-items: stretch;
+		gap: 20px;
+	}
+	.review-div {
+		max-width: 200px;
+	}
 
 	.slutsektionr > div {
 		flex-shrink: 0;
 	}
 
+	/*-----------------endsection start---------------  */
 	#slutsektion {
 		display: flex;
 		flex-direction: row-reverse;
@@ -613,6 +622,10 @@ footer > div {
 	.form-container {
 		width: 350px;
 	}
+
+	/*--------------reviewandcontact-end-----------*/
+	/*--------------footer-----------*/
+
 	footer {
 		flex-direction: row;
 	}
