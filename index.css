@@ -4,15 +4,15 @@ header {
 	min-height: 100svh;
 	max-height: 100%;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
+	justify-content: flex-start;
 	background-color: var(--main-color);
 	background-image: linear-gradient(
-			var(--medium-color1-filter),
-			var(--medium-color1-filter)
+			var(--main-color-filter4),
+			var(--darker-color) 70%
 		),
-		url("bilder/Small/dogsnowcover360.jpeg");
-	background-position: center;
+		url("bilder/medium/doris360.jpeg");
+	background-position: bottom 50% right 60%;
 	background-size: cover;
 	margin: 0;
 }
@@ -20,19 +20,10 @@ header {
 @media (-webkit-min-device-pixel-ratio: 2) {
 	header {
 		background-image: linear-gradient(
-				var(--medium-color1-filter),
-				var(--medium-color1-filter)
+				var(--main-color-filter4),
+				var(--darker-color) 70%
 			),
-			url("bilder/medium/dogsnowcover720.jpeg");
-	}
-}
-@media (-webkit-min-device-pixel-ratio: 3) {
-	header {
-		background-image: linear-gradient(
-				var(--medium-color1-filter),
-				var(--medium-color1-filter)
-			),
-			url("bilder/large/dogsnowcover1080.jpeg");
+			url("bilder/large/doris940.jpeg");
 	}
 }
 
@@ -108,24 +99,86 @@ a {
 	margin: 0;
 }
 #header-text-container {
+	position: relative;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--light-color);
-	margin: 50px;
-	margin-top: 150px;
+	background-color: var(--main-color-filter4);
+	color: var(--lightest-color);
+	margin: auto;
+	margin-top: 40vh;
+	margin-bottom: 20px;
 	padding: 20px;
 	max-width: 340px;
 	border-radius: 18px;
+	backdrop-filter: blur(35px);
+	animation: 4s ease fadin;
 }
+#header-text-container button {
+	height: 40px;
+	width: 100%;
+	animation: 2s ease fadeinbutton;
+}
+@keyframes fadin {
+	0% {
+		filter: blur(400px);
+		backdrop-filter: blur(0px);
+		background-color: transparent;
+		color: transparent;
+	}
+	30% {
+		filter: blur(0px);
+		background-color: transparent;
+		color: transparent;
+	}
+	100% {
+		filter: blur(0px);
+		backdrop-filter: blur(35px);
+		background-color: var(--main-color-filter4);
+	}
+}
+@keyframes fadintass {
+	0% {
+		width: 0px;
+		height: 0px;
+	}
+	100% {
+		width: 40px;
+		height: 40px;
+	}
+}
+@keyframes fadinlinje {
+	0% {
+		height: 0px;
+		max-width: 0px;
+	}
+	100% {
+		height: 1px;
+		max-width: 320px;
+	}
+}
+@keyframes fadeinbutton {
+	0% {
+		height: 0px;
+		max-width: 0px;
+	}
+	100% {
+		height: 40px;
+		max-width: 100%;
+	}
+}
+
 #header-linje {
 	height: 1px;
 	max-width: 320px;
-	background-color: var(--darker-color);
+	background-color: var(--light-color);
+	animation: 2s ease fadinlinje;
 }
 
 .tass-i-text {
 	width: 40px;
 	height: 40px;
+	animation: 2s ease fadintass;
 }
 /*--------------- header/hero end-------------*/
 /* ------------------Main-start------------ */
@@ -141,13 +194,14 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	padding: 50px;
-	background-color: var(--main-color);
+	background-color: var(--main-color-filter7);
 	background-image: linear-gradient(
 			var(--main-color-filter2),
 			var(--main-color-filter2)
 		),
 		url("bilder/Tassmedium.png");
 	background-size: 10%;
+	backdrop-filter: blur(35px);
 }
 .sektion-services-textdiv button {
 	background-color: var(--complement-color);
@@ -194,6 +248,59 @@ main {
 	transition: all 2s;
 	scale: 1.1;
 } */
+
+.bustassar {
+	filter: blur(40px);
+}
+
+#sektion-kloklippning:hover .bustassar {
+	display: block;
+	filter: blur(0px);
+}
+
+#bustass1 {
+	position: absolute;
+	transition: all 0.3s;
+	transition-delay: 1.5s;
+	top: 50px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass2 {
+	position: absolute;
+	transition: all 0.3s;
+	transition-delay: 1s;
+	top: 150px;
+	right: 20px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass3 {
+	position: absolute;
+	transition: all 0.3s;
+	transition-delay: 0.5s;
+	top: 200px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass4 {
+	position: absolute;
+	transition: all 0.3s;
+	top: 300px;
+	right: 20px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
 
 @media (-webkit-min-device-pixel-ratio: 2) {
 	#sektion-services-imgbulldog {
@@ -271,6 +378,73 @@ main {
 	color: var(--light-color);
 }
 
+/*    Tassar över skärm   */
+#sektion-vet:hover .bustassar1 {
+	display: block;
+	cursor: pointer;
+	filter: blur(0px);
+}
+.bustassar1 {
+	filter: blur(40px);
+}
+
+#bustass5 {
+	transform: rotate(90deg);
+	position: absolute;
+	top: 2px;
+	left: 10px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass6 {
+	position: absolute;
+	transition: all 0.3s;
+	transform: rotate(90deg);
+	transition-delay: 0.5s;
+	top: 10px;
+	left: 90px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass7 {
+	position: absolute;
+	transition: all 0.3s;
+	transform: rotate(90deg);
+	transition-delay: 1s;
+	top: 2px;
+	left: 170px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass8 {
+	position: absolute;
+	transition: all 0.3s;
+	transform: rotate(90deg);
+	transition-delay: 1.5s;
+	top: 10px;
+	left: 250px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+#bustass10 {
+	position: absolute;
+	top: 2px;
+	left: 200px;
+	height: 30px;
+	width: 30px;
+	background-image: url(bilder/tassDark.png);
+	background-size: cover;
+}
+/*    Tassar över skärm En  */
+
 #sektion-vet img {
 	box-sizing: border-box;
 	height: 50vh;
@@ -305,7 +479,7 @@ main {
 		url("bilder/Small/bridgeS.jpeg");
 	background-position: bottom 50% right 50%;
 	width: 100vw;
-	height: 100vh;
+	height: 100lvh;
 	top: 0;
 	z-index: -1;
 	background-size: cover;
@@ -325,7 +499,7 @@ main {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	background-color: var(--darker-color);
+	background-color: var(--main-color-filter6);
 	color: var(--light-color);
 	padding: 20px;
 	border-radius: 20px;
@@ -333,6 +507,7 @@ main {
 	border: solid var(--complement-color);
 	max-width: 250px;
 	margin-top: 50px;
+	backdrop-filter: blur(35px);
 }
 
 .review-div > p {
@@ -467,7 +642,7 @@ address {
 				to right,
 				var(--darker-color),
 				80%,
-				var(--medium-color1-filter)
+				var(--main-color-filter4)
 			),
 			url("bilder/large/StaffordSnowL.jpeg");
 		background-position: bottom 0% right 40%;
@@ -523,10 +698,17 @@ address {
 
 	#header-text-container {
 		background-color: transparent;
-		color: var(--light-color);
+		color: var(--lightest-color);
+		margin-top: 25vh;
+
 		margin-left: 10vw;
 		filter: Blur(0px);
 		animation: blurring 3s ease;
+	}
+	#header-text-container button {
+		height: 40px;
+		width: 100px;
+		animation: none;
 	}
 	#header-linje {
 		background-color: var(--complement-color);
@@ -572,7 +754,7 @@ address {
 		min-height: 50vh;
 	}
 
-	#sektion-vet div {
+	#sektion-vet .sektion-services-textdiv {
 		box-sizing: border-box;
 		width: 50lvw;
 	}
