@@ -9,7 +9,7 @@
 	--main-color: #143566;
 	--main-color-filter7: #143566dd;
 	--main-color-filter2: #143566e3;
-	--main-color-filter4: #1435662f;
+	--main-color-filter4: #1435668a;
 	--main-color-filter5: #111e33a9;
 	--main-color-filter6: #111e33d9;
 	--main-color-filter3: #b8c9e3f0;
@@ -50,14 +50,11 @@ img {
 }
 h1,
 h2 {
-	font-family: AgencyG, sans-serif;
+	font-family: AgencyG, "Trebuchet MS", sans-serif;
 	font-size: xx-large;
 }
 
-/* här ville jag använda float:right pga av 1 rad kod i en regel istället för
- 3 rader på både förälder och barnet, men hörde att det var big nono*/
 button {
-	/* float: right; */
 	align-self: flex-end;
 	color: var(--darker-color);
 	padding: 10px;

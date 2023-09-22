@@ -106,19 +106,31 @@ a {
 	background-color: var(--main-color-filter4);
 	color: var(--lightest-color);
 	margin: auto;
-	margin-top: 40vh;
 	margin-bottom: 20px;
 	padding: 20px;
 	max-width: 340px;
 	border-radius: 18px;
 	backdrop-filter: blur(35px);
-	animation: 4s ease fadin;
+	animation: 2s ease fadin;
 }
 #header-text-container button {
 	height: 40px;
 	width: 100%;
-	animation: 2s ease fadeinbutton;
+	animation: 1s ease fadeinbutton;
 }
+#header-linje {
+	height: 1px;
+	max-width: 320px;
+	background-color: var(--light-color);
+	animation: 1s ease fadinlinje;
+}
+
+.tass-i-text {
+	width: 40px;
+	height: 40px;
+	animation: 1s ease fadintass;
+}
+/* några skojiga effekter för att välkomna besökare */
 @keyframes fadin {
 	0% {
 		filter: blur(400px);
@@ -168,18 +180,6 @@ a {
 	}
 }
 
-#header-linje {
-	height: 1px;
-	max-width: 320px;
-	background-color: var(--light-color);
-	animation: 2s ease fadinlinje;
-}
-
-.tass-i-text {
-	width: 40px;
-	height: 40px;
-	animation: 2s ease fadintass;
-}
 /*--------------- header/hero end-------------*/
 /* ------------------Main-start------------ */
 main {
@@ -239,14 +239,26 @@ main {
 		),
 		url("bilder/Small/EbulldogM360.jpeg");
 	background-position: bottom 60% right 0%;
-	/* scale: 1;
-	transition: all 2s; */
 }
-/* #sektion-services-imgbulldog:hover {
-	transition: all 2s;
-	scale: 1.1;
-} */
 
+@media (-webkit-min-device-pixel-ratio: 2) {
+	#sektion-services-imgbulldog {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/medium/EbulldogM720.jpeg");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+	#sektion-services-imgbulldog {
+		background-image: linear-gradient(
+				var(--medium-color1-filter),
+				var(--medium-color1-filter)
+			),
+			url("bilder/large/EbulldogM1080.jpeg");
+	}
+}
 .bustassar {
 	filter: blur(40px);
 }
@@ -300,24 +312,6 @@ main {
 	background-size: cover;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
-	#sektion-services-imgbulldog {
-		background-image: linear-gradient(
-				var(--medium-color1-filter),
-				var(--medium-color1-filter)
-			),
-			url("bilder/medium/EbulldogM720.jpeg");
-	}
-}
-@media (-webkit-min-device-pixel-ratio: 3) {
-	#sektion-services-imgbulldog {
-		background-image: linear-gradient(
-				var(--medium-color1-filter),
-				var(--medium-color1-filter)
-			),
-			url("bilder/large/EbulldogM1080.jpeg");
-	}
-}
 /*----------- kloklippning-end--------- */
 
 /*-----------Promenad Start ---------------- */
