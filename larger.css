@@ -1,0 +1,186 @@
+/* --------HERO/Header Start ----------------------------- */
+header {
+	align-items: start;
+	background-color: var(--medium-color1);
+	background-image: linear-gradient(
+			to right,
+			var(--darker-color),
+			80%,
+			var(--main-color-filter4)
+		),
+		url("bilder/large/StaffordSnowL.jpeg");
+	background-position: bottom 0% right 40%;
+	background-size: cover;
+	min-height: 100vh;
+	/* animation: 1s ease zoomer; */
+	/* animation: zoomer 5s linear infinite; */
+	/* -webkit-animation: zoomer 2s linear forwards;
+		animation: zoomer 2s linear forwards; */
+}
+/* la till en skojig välkommst effekt */
+@keyframes blurring {
+	0% {
+		filter: Blur(10px);
+	}
+	80% {
+		filter: Blur(0px);
+	}
+}
+
+/* -------------Navbar--------------------- */
+#navigationbar {
+	overflow: hidden;
+}
+#navlist {
+	display: flex;
+	height: 100%;
+}
+#hamburgare-select-meny {
+	display: none;
+}
+#navimg-tass {
+	height: 20px;
+	width: 20px;
+}
+#tassikon {
+	margin: 10px;
+}
+.lankar {
+	box-sizing: border-box;
+	color: var(--light-color);
+	height: 100%;
+	padding: 20px;
+	background-color: var(--main-color);
+}
+.lankar:hover {
+	color: var(--darker-color);
+	background-color: var(--light-color);
+}
+/* -------------Navbar end--------------------- */
+
+#header-text-container {
+	background-color: transparent;
+	color: var(--lightest-color);
+	margin-top: 25vh;
+
+	margin-left: 10vw;
+	filter: Blur(0px);
+	animation: blurring 3s ease;
+}
+#header-text-container button {
+	height: 40px;
+	width: 100px;
+	animation: none;
+}
+#header-linje {
+	background-color: var(--complement-color);
+}
+/* --------HERO/Header End ----------------------------- */
+/*---------------------------------------------Main-------------------------*/
+/*-------------Services start ---------------*/
+.sektion-services-textdiv {
+	padding: 50px;
+	width: 50%;
+}
+.sektion-services-imgdiv {
+	width: 50%;
+}
+/*-----------------------------Sektion-Kloklippning------------------------ */
+#sektion-kloklippning {
+	flex-direction: row;
+}
+#sektion-services-imgbulldog {
+	background-image: linear-gradient(
+			var(--medium-color1-filter),
+			var(--medium-color1-filter)
+		),
+		url("bilder/large/EbulldogM1080.jpeg");
+}
+/*-----------------------------Sektion-prommenad----------------------------*/
+#sektion-promenad {
+	flex-direction: row-reverse;
+}
+
+#sektion-services-meeting {
+	background-image: linear-gradient(
+			var(--medium-color1-filter),
+			var(--medium-color1-filter)
+		),
+		url("bilder/large/meeting1080.jpeg");
+}
+
+/*---------------------Sektion-Vet-----------------------------------------*/
+#sektion-vet {
+	display: flex;
+	flex-direction: row;
+	min-height: 50vh;
+}
+
+#sektion-vet .sektion-services-textdiv {
+	box-sizing: border-box;
+	width: 50lvw;
+}
+#sektion-vet img {
+	box-sizing: border-box;
+	width: 50lvw;
+	height: auto;
+	object-fit: cover;
+}
+/*-------------Services end ---------------*/
+/*--------------sektion reviewandcontact start-----------*/
+.sektion-reviewandcontact {
+	margin: 50px 0;
+	gap: 100px;
+}
+.sektion-reviewandcontact-background-image {
+	background-image: linear-gradient(
+			var(--medium-color1-filter),
+			var(--medium-color1-filter)
+		),
+		url("bilder/large/bridgeL.jpeg");
+	height: 100vh;
+	width: 100vw;
+}
+/*-----------------Review start---------------  */
+.review-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 20px;
+}
+.review-div {
+	max-width: 200px;
+}
+
+.slutsektionr > div {
+	flex-shrink: 0;
+}
+
+/*-----------------endsection start---------------  */
+#slutsektion {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 20px;
+}
+
+.om-oss {
+	margin: 0;
+}
+
+.form-container {
+	width: 350px;
+}
+
+/*--------------reviewandcontact-end-----------*/
+/*--------------footer-----------*/
+
+footer {
+	flex-direction: row;
+}
+footer > div {
+	margin: 20px;
+}
