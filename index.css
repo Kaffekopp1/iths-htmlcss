@@ -212,8 +212,6 @@ main {
 .sektion-services-textdiv button:hover {
 	color: var(--complement-color);
 	background-color: var(--darker-color);
-	width: 100px;
-	align-self: self-end;
 }
 .sektion-services-textdivbutton:hover {
 	background-color: var(--light-color);
@@ -336,7 +334,7 @@ main {
 			var(--main-color-filter3),
 			var(--main-color-filter3)
 		),
-		url(bilder/Tassljusare.png);
+		url(bilder/medium/Tassljusare.png);
 	color: var(--darker-color);
 }
 #sektion-services-meeting {

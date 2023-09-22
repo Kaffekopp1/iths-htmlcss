@@ -39,7 +39,25 @@
 					<option value="store.html">Affär</option>
 				</select>
 				<!--**************hamburgermeny stop*********************-->
-				<img src="bilder/Tassljusare.png" alt="tassikon" id="tassikon" />
+				<!-- <picture id="hero-ikone-pictures">
+					<source media="(min-width: 600px)" srcset="bilder/Tass.png" />
+					<source media="(max-width: 600px)" srcset="bilder/tassDark.png" />
+					<img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
+				</picture> -->
+				<picture>
+					<source
+						srcset="
+							bilder/small/Tassljusare.png,
+							bilder/medium/Tassljusare.png 1.5x
+						"
+					/>
+					<img
+						src="bilder/small/Tassljusare.png"
+						id="tassikon"
+						alt="tassikon"
+					/>
+				</picture>
+
 				<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
 				<ul id="navlist">
 					<li><a class="lankar" href="index.html">Hem</a></li>
@@ -47,11 +65,14 @@
 					<li><a class="lankar" href="#contact">Kontakt</a></li>
 				</ul>
 				<a href="store.html">
-					<img
-						id="navimg-store"
-						src="bilder/vagnljus.png"
-						alt="bild-kundvagn"
-					/>
+					<picture>
+						<source srcset="bilder/vagnljus.png, bilder/vagn60.png 1.5x" />
+						<img
+							src="bilder/vagnljus.png"
+							id="navimg-store"
+							alt="bild-kundvagn"
+						/>
+					</picture>
 				</a>
 			</nav>
 			<!--**********************************navbar stop******************-->
