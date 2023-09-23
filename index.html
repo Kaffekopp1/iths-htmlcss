@@ -21,6 +21,9 @@
 	</head>
 	<body>
 		<!--All text är skriven med inspiration av chatgpt-->
+		<!--Har använt både <picture> <img> och css "background-image" för att göra
+		samma jobb på olika ställen.Jag hade varit mer konsekvent,
+		 men ville testa på alla sätt-->
 		<!--                              Header/Hero star-->
 		<header>
 			<!--             navbar start   -->
@@ -30,6 +33,9 @@
 					jag la in detta för att stilla min egen nyfikenhet ifall/hur det gick att göra
 					utan js. Kanske inte finaste lösningen men en lösning
 				-->
+				<label id="hamburger-label" for="hamburgare-select-meny">
+					Länkar
+				</label>
 				<select
 					aria-label="Sido-Länkar"
 					id="hamburgare-select-meny"
@@ -48,7 +54,7 @@
 				<picture>
 					<source
 						srcset="
-							bilder/small/Tassljusare.png,
+							bilder/small/TassljusareS.png,
 							bilder/medium/Tassljusare.png 2x
 						"
 					/>
@@ -80,13 +86,6 @@
 			<section id="header-text-container">
 				<div id="hero-headingandimg-container">
 					<h2>TASSENS HUNDDAGIS</h2>
-					<!--Picture element för att byta färg
-						på tass ikonen beroende på storlek-->
-					<!-- <picture id="hero-ikone-pictures">
-						<source media="(min-width: 600px)" srcset="bilder/Tass.png" />
-						<source media="(max-width: 600px)" srcset="bilder/tassDark.png" />
-						<img class="tass-i-text" src="bilder/Tass.png" alt="bild-tass" />
-					</picture> -->
 					<picture id="hero-ikone-pictures">
 						<source media="(min-width: 600px)" srcset="bilder/Tass.png" />
 						<source media="(max-width: 600px)" srcset="bilder/Tass.png" />
@@ -121,11 +120,10 @@
 							att skapa en lugn och positiv atmosfär.
 						</p>
 						<button>Boka</button>
-
-						<div class="bustassar" id="bustass1"></div>
-						<div class="bustassar" id="bustass2"></div>
-						<div class="bustassar" id="bustass3"></div>
-						<div class="bustassar" id="bustass4"></div>
+						<div class="bustassar" id="bustass-1"></div>
+						<div class="bustassar" id="bustass-2"></div>
+						<div class="bustassar" id="bustass-3"></div>
+						<div class="bustassar" id="bustass-4"></div>
 					</div>
 
 					<div
@@ -145,6 +143,11 @@
 							behöver.
 						</p>
 						<button>Boka</button>
+
+						<div class="bustassar-1" id="bustass-5"></div>
+						<div class="bustassar-1" id="bustass-6"></div>
+						<div class="bustassar-1" id="bustass-7"></div>
+						<div class="bustassar-1" id="bustass-8"></div>
 					</div>
 					<div
 						class="sektion-services-imgdiv"
@@ -152,7 +155,7 @@
 					></div>
 				</section>
 				<!--Jag ville testa att använda srcset på en bild likt nedan
-					därför är den sista sektionen annorlunda från de två övre.-->
+						därför är den sista sektionen annorlunda från de två övre.-->
 				<section id="sektion-vet">
 					<div class="sektion-services-textdiv">
 						<h2>Veterinär</h2>
@@ -164,10 +167,10 @@
 						</p>
 						<button>Boka</button>
 
-						<div class="bustassar1" id="bustass5"></div>
-						<div class="bustassar1" id="bustass6"></div>
-						<div class="bustassar1" id="bustass7"></div>
-						<div class="bustassar1" id="bustass8"></div>
+						<div class="bustassar-2" id="bustass-10"></div>
+						<div class="bustassar-2" id="bustass-11"></div>
+						<div class="bustassar-2" id="bustass-12"></div>
+						<div class="bustassar-2" id="bustass-13"></div>
 					</div>
 					<img
 						id="staffuppside"
