@@ -114,7 +114,6 @@ a {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--main-color-filter4);
 	color: var(--lightest-color);
 	margin: auto;
 	margin-bottom: 20px;
@@ -158,7 +157,6 @@ a {
 	100% {
 		filter: blur(0px);
 		backdrop-filter: blur(35px);
-		background-color: var(--main-color-filter4);
 	}
 }
 @keyframes fadintass {
