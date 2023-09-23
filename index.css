@@ -122,26 +122,27 @@ a {
 	max-width: 340px;
 	border-radius: 18px;
 	backdrop-filter: blur(35px);
-	/* animation: 2s ease fadin; */
+	-webkit-backdrop-filter: blur(35px);
+	animation: 2s ease fadin;
 }
 #header-text-container button {
 	height: 40px;
 	width: 100%;
-	/* animation: 1s ease fadeinbutton; */
+	animation: 1s ease fadeinbutton;
 }
 #header-linje {
 	height: 1px;
 	max-width: 320px;
 	background-color: var(--light-color);
-	/* animation: 1s ease fadinlinje;*/
+	animation: 1s ease fadinlinje;
 }
 
 .tass-i-text {
 	width: 40px;
 	height: 40px;
-	/* animation: 1s ease fadintass; */
+	animation: 1s ease fadintass;
 }
-/* några skojiga effekter för att välkomna besökare
+/* några skojiga effekter för att välkomna besökare */
 @keyframes fadin {
 	0% {
 		filter: blur(400px);
@@ -189,8 +190,7 @@ a {
 		height: 40px;
 		max-width: 100%;
 	}
-} */
-
+}
 /*--------------- header/hero end-------------*/
 /* ------------------Main-start------------ */
 main {
@@ -213,6 +213,7 @@ main {
 		url("bilder/Tassmedium.png");
 	background-size: 10%;
 	backdrop-filter: blur(35px);
+	-webkit-backdrop-filter: blur(35px);
 }
 .sektion-services-textdiv button {
 	background-color: var(--complement-color);
@@ -428,7 +429,6 @@ main {
 	background-image: url("bilder/TassLight.png");
 	background-size: cover;
 }
-
 /*    Tassar över skärm(1) end  */
 /*-----------Promenad end ---------------- */
 /*-----------Sektion-Vet----------------- */
@@ -561,6 +561,7 @@ main {
 	max-width: 250px;
 	margin-top: 50px;
 	backdrop-filter: blur(35px);
+	-webkit-backdrop-filter: blur(35px);
 }
 
 .review-div > p {
