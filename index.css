@@ -530,7 +530,7 @@ main {
 		url("bilder/Small/bridgeS.jpeg");
 	background-position: bottom 50% right 50%;
 	width: 100vw;
-	height: 100lvh;
+	height: 100vh;
 	top: 0;
 	z-index: -1;
 	background-size: cover;
@@ -578,6 +578,7 @@ main {
 	height: 100px;
 	border-radius: 180px;
 }
+/* förberett för specifika bilder */
 #review-img-1 {
 	background-color: var(--main-color);
 	background-image: url("bilder/ture.jpg");
@@ -666,7 +667,7 @@ footer img {
 #kontaktruta p {
 	margin: 0px;
 }
-/* Ville här använda float right */
+
 #google-link {
 	float: right;
 }
