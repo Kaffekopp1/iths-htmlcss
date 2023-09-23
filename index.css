@@ -1,4 +1,8 @@
 /* --------------------HERO/Header Start ----------------------------- */
+/* Att använda background-image tillsammans med height definierat med "vh"eller
+ dyl fungerar ej bra på ios
+med webläsare duckduckgo, bilden justeras utefter webläsarens sökfält. */
+
 header {
 	display: flex;
 	min-height: 100svh;
@@ -118,26 +122,26 @@ a {
 	max-width: 340px;
 	border-radius: 18px;
 	backdrop-filter: blur(35px);
-	animation: 2s ease fadin;
+	/* animation: 2s ease fadin; */
 }
 #header-text-container button {
 	height: 40px;
 	width: 100%;
-	animation: 1s ease fadeinbutton;
+	/* animation: 1s ease fadeinbutton; */
 }
 #header-linje {
 	height: 1px;
 	max-width: 320px;
 	background-color: var(--light-color);
-	animation: 1s ease fadinlinje;
+	/* animation: 1s ease fadinlinje;*/
 }
 
 .tass-i-text {
 	width: 40px;
 	height: 40px;
-	animation: 1s ease fadintass;
+	/* animation: 1s ease fadintass; */
 }
-/* några skojiga effekter för att välkomna besökare */
+/* några skojiga effekter för att välkomna besökare
 @keyframes fadin {
 	0% {
 		filter: blur(400px);
@@ -185,7 +189,7 @@ a {
 		height: 40px;
 		max-width: 100%;
 	}
-}
+} */
 
 /*--------------- header/hero end-------------*/
 /* ------------------Main-start------------ */
@@ -234,7 +238,6 @@ main {
 	flex-direction: column;
 	margin: 0;
 	color: var(--light-color);
-	/* overflow: hidden; */
 }
 
 #sektion-services-imgbulldog {
@@ -266,7 +269,7 @@ main {
 			url("bilder/large/EbulldogM1080.jpeg");
 	}
 }
-/* Effekt med vandrande tassar över skärmen vid hover */
+/* Effekt med vandrande tassar över skärmen(0) vid hover */
 .bustassar {
 	filter: blur(40px);
 }
@@ -284,7 +287,7 @@ main {
 	right: 10px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-2 {
@@ -295,7 +298,7 @@ main {
 	right: 20px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-3 {
@@ -306,7 +309,7 @@ main {
 	right: 10px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-4 {
@@ -316,7 +319,7 @@ main {
 	right: 20px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 /* Effekt med vandrande tassar över skärmen (0) vid hover END */
@@ -336,7 +339,7 @@ main {
 			var(--main-color-filter3),
 			var(--main-color-filter3)
 		),
-		url(bilder/medium/Tassljusare.png);
+		url("bilder/medium/Tassljusare.png");
 	color: var(--darker-color);
 }
 #sektion-services-meeting {
@@ -386,7 +389,7 @@ main {
 	left: 10px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/TassLight.png);
+	background-image: url("bilder/TassLight.png");
 	background-size: cover;
 }
 #bustass-6 {
@@ -398,7 +401,7 @@ main {
 	left: 20px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/TassLight.png);
+	background-image: url("bilder/TassLight.png");
 	background-size: cover;
 }
 #bustass-7 {
@@ -410,7 +413,7 @@ main {
 	left: 2px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/TassLight.png);
+	background-image: url("bilder/TassLight.png");
 	background-size: cover;
 }
 #bustass-8 {
@@ -422,7 +425,7 @@ main {
 	left: 15px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/TassLight.png);
+	background-image: url("bilder/TassLight.png");
 	background-size: cover;
 }
 
@@ -453,7 +456,7 @@ main {
 	left: 10px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-11 {
@@ -465,7 +468,7 @@ main {
 	left: 90px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-12 {
@@ -477,7 +480,7 @@ main {
 	left: 170px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 #bustass-13 {
@@ -489,7 +492,7 @@ main {
 	left: 250px;
 	height: 30px;
 	width: 30px;
-	background-image: url(bilder/tassDark.png);
+	background-image: url("bilder/tassDark.png");
 	background-size: cover;
 }
 
@@ -576,15 +579,15 @@ main {
 	height: 100px;
 	border-radius: 180px;
 }
-#review-img1 {
+#review-img-1 {
 	background-color: var(--main-color);
 	background-image: url("bilder/ture.jpg");
 }
-#review-img2 {
+#review-img-2 {
 	background-color: var(--main-color);
 	background-image: url("bilder/ture.jpg");
 }
-#review-img3 {
+#review-img-3 {
 	background-color: var(--main-color);
 	background-image: url("bilder/ture.jpg");
 }

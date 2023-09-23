@@ -1,3 +1,16 @@
+#background-image-store {
+	position: fixed;
+	background-color: var(--medium-color1);
+	background-image: url("bilder/tassbakgrund.png");
+	background-repeat: no-repeat;
+	background-position: bottom 50% right 50%;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	background-size: 90%;
+	z-index: -1;
+}
+/*-----------Header----------------*/
 /* -------------Navbar--------------------- */
 #navigationbar {
 	background-color: var(--main-color);
@@ -33,15 +46,15 @@ header h1 {
 #navlist li a {
 	color: var(--lightest-color);
 }
-
-#store-h1 {
+/*--------navbar end */
+/*-----------Header End----------------*/
+#store-h2 {
 	background-color: var(--darker-color);
 	color: var(--lightest-color);
 	text-align: center;
 	padding: 20px;
 	box-shadow: 2px 2px 5px 1px var(--darker-color);
 }
-
 /*---------------------affärslista----- */
 
 #erbjudande-list {
@@ -110,6 +123,8 @@ header h1 {
 	margin-bottom: 20px;
 	border-radius: 20px;
 }
+/*---------------------affärslista End----- */
+/*---------------------Information----- */
 #side-div {
 	color: var(--light-color);
 	background-color: var(--darker-color);
@@ -119,18 +134,8 @@ header h1 {
 	border-radius: 30px 30px;
 	padding: 20px;
 }
-#background-image-store {
-	position: fixed;
-	background-color: var(--medium-color1);
-	background-image: url("bilder/tassbakgrund.png");
-	background-repeat: no-repeat;
-	background-position: bottom 50% right 50%;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	background-size: 90%;
-	z-index: -1;
-}
+/*---------------------Information End----- */
+/*---------------------Footer----- */
 
 footer {
 	display: flex;
@@ -171,26 +176,11 @@ footer > div {
 	justify-content: center;
 }
 
-@media screen and (min-width: 500px) {
-	#erbjudande-list {
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: 20px;
-	}
-	.erbjudanden {
-		margin: 0;
-		width: 200px;
-		border-radius: 0px 120px 0px 120px;
-	}
+/* ------------------------Larger sceen ---------------*/
+
+@media screen and (min-width: 600px) {
 	#background-image-store {
 		background-size: 80%;
-	}
-	#erbjudande-list {
-		grid-area: erbjudandelist;
-	}
-	#store-h1 {
-		grid-area: heading;
-		height: 40px;
 	}
 	main {
 		display: grid;
@@ -200,6 +190,21 @@ footer > div {
 			"heading heading"
 			"information 	erbjudandelist";
 		gap: 20px;
+	}
+	#erbjudande-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+		grid-area: erbjudandelist;
+	}
+	.erbjudanden {
+		margin: 0;
+		width: 200px;
+		border-radius: 0px 120px 0px 120px;
+	}
+	#store-h2 {
+		grid-area: heading;
+		height: 40px;
 	}
 	#information {
 		grid-area: information;
