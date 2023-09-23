@@ -42,19 +42,7 @@ header {
 	width: 30px;
 	height: 30px;
 }
-/* för att gömma label*/
-#hamburger-label {
-	width: 0;
-	height: 0;
-	margin: 0;
-	overflow: hidden;
-	position: absolute;
-}
 
-#navlist {
-	padding: 0;
-	display: none;
-}
 #navimg-store {
 	height: 20px;
 	width: 20px;
@@ -64,45 +52,54 @@ header {
 	display: none;
 }
 
-#navlist {
-	align-items: center;
-	list-style: none;
-}
-#navlist li {
-	margin: 0 12px;
-}
-a {
-	text-decoration: none;
-	color: black;
-}
 /* ---------------------För att få en hamburger meny utan js------------------ */
-
-/*gömmer pilen på drop meny https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element */
-#hamburgare-select-meny {
-	background-color: var(--dark-color);
-	height: 40px;
-	width: 40px;
-	border-radius: 180px;
-	margin-left: 20px;
+/* avstamp från denna:  https://www.w3schools.com/css/css_dropdowns.asp  */
+/*hamburger */
+#hamburger-meny {
+	position: relative;
+	margin: 5px;
+	display: inline-block;
+}
+#hamburger-image {
+	background-color: transparent;
 	background-image: url("bilder/Hamburger.png");
 	background-position: center;
+	height: 40px;
+	width: 40px;
 	background-size: 80%;
 	background-repeat: no-repeat;
 	appearance: none;
 	cursor: pointer;
-	border: none;
-	color: transparent;
-	margin: 5px;
 }
-
-#hamburgare-select-meny * {
+#hamburger-content {
+	display: none;
+	position: absolute;
+	margin: none;
+	top: 10px;
 	background-color: var(--darker-color);
-	color: var(--lightest-color);
+	min-width: 20px;
+	padding: 12px 16px;
+	border-radius: 18px;
+	z-index: 1;
 }
 
-#hamburgare-select-no-value {
-	color: transparent;
+#hamburger-meny:focus-within #hamburger-content,
+#hamburger-meny:hover #hamburger-content {
+	display: block;
 }
+
+#hamburger-content li a {
+	display: block;
+	background-color: var(--lightest-color);
+	color: var(--darker-color);
+	margin: 20px;
+	padding: 10px;
+	height: 20px;
+	border-radius: 5px;
+	border: solid var(--main-color);
+	color: var(--darker-color);
+}
+/* hamburger end */
 #hero-headingandimg-container {
 	display: flex;
 	align-items: center;
@@ -142,6 +139,7 @@ a {
 	animation: 1s ease fadintass;
 }
 /* några skojiga effekter för att välkomna besökare */
+
 @keyframes fadin {
 	0% {
 		filter: blur(400px);

@@ -28,26 +28,26 @@
 		<header>
 			<!--             navbar start   -->
 			<nav id="navigationbar">
-				<!-- Hamburger meny ville använda minimalt med js men här blev det nog lite.
-					https://stackoverflow.com/questions/2000656/using-href-links-inside-option-tag
-
+				<!-- Hamburger meny ville inte använda någon js för menyn så jag tog avstamp
+						från denna:  https://www.w3schools.com/css/css_dropdowns.asp
+						och fixade sedan med styling/tillgänglighet så att den var nåbar för skärmläsare
 				-->
-				<label id="hamburger-label" for="hamburgare-select-meny">
-					Länkar
-				</label>
-				<select
-					aria-label="Sido-Länkar"
-					id="hamburgare-select-meny"
-					name="hamburger"
-					onchange="location = this.value;"
-				>
-					<option id="hamburgare-select-no-value" value="#select-meny">
-						Hem
-					</option>
-					<option value="#contact">kontakt</option>
-					<option value="#omoss">Om oss</option>
-					<option value="store.html">Affär</option>
-				</select>
+
+				<div id="hamburger-meny" aria-label="Länkar">
+					<button
+						id="hamburger-image"
+						aria-expanded="false"
+						aria-label="Toggle Menu"
+					></button>
+					<ul id="hamburger-content">
+						<li><a class="hamburger-lankar" href="index.html">Hem</a></li>
+						<li>
+							<a class="hamburger-lankar" id="testlank" href="#omoss">Om oss</a>
+						</li>
+						<li><a class="hamburger-lankar" href="#contact">Kontakt</a></li>
+						<li><a class="hamburger-lankar" href="store.html">Affär</a></li>
+					</ul>
+				</div>
 				<!--**************hamburgermeny stop*********************-->
 
 				<picture>
@@ -64,12 +64,8 @@
 					/>
 				</picture>
 				<img id="navimg-tass" src="bilder/Tass50.png" alt="bild-tass" />
-				<ul id="navlist">
-					<li><a class="lankar" href="index.html">Hem</a></li>
-					<li><a id="testlank" class="lankar" href="#omoss">Om oss</a></li>
-					<li><a class="lankar" href="#contact">Kontakt</a></li>
-				</ul>
-				<a href="store.html">
+
+				<a id="storelink" href="store.html">
 					<picture>
 						<source srcset="bilder/vagnljus.png, bilder/vagn60.png 1.5x" />
 						<img
