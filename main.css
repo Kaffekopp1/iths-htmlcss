@@ -7,12 +7,12 @@
 	--medium-color1: #2d75e1;
 	--medium-color2: #1c498c;
 	--main-color: #143566;
-	--main-color-filter7: #143566dd;
 	--main-color-filter2: #143566e3;
 	--main-color-filter4: #1435668a;
+	--main-color-filter3: #b8c9e3f0;
 	--main-color-filter5: #111e33a9;
 	--main-color-filter6: #111e33c2;
-	--main-color-filter3: #b8c9e3f0;
+	--main-color-filter7: #143566dd;
 	--medium-color1-filter: #1435663d;
 	--darker-color: #111e33;
 	--complement-color: #e0a42d;
@@ -22,6 +22,7 @@
 	src: url(./Roboto-Light.ttf);
 	font-display: swap;
 }
+
 p {
 	font-family: "Courier New", Courier, monospace, sans-serif;
 }
@@ -37,9 +38,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: roboL, sans-serif;
-	background-color: var(--medium-color1);
+	background-color: var(--light-color);
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 	margin: 0;
-	overflow-x: hidden;
 }
 
 /* den vanliga blå färgen som blir ifall bilden ej laddas

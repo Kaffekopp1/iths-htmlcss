@@ -6,6 +6,7 @@ med webläsare duckduckgo, bilden justeras utefter webläsarens sökfält. */
 header {
 	display: flex;
 	min-height: 100svh;
+	width: 100%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
@@ -18,6 +19,7 @@ header {
 	background-position: bottom 50% right 60%;
 	background-size: cover;
 	margin: 0;
+	padding: 0;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
@@ -74,7 +76,7 @@ header {
 #hamburger-content {
 	display: none;
 	position: absolute;
-	margin: none;
+	margin: 0;
 	top: 10px;
 	background-color: var(--darker-color);
 	min-width: 20px;
@@ -87,7 +89,8 @@ header {
 #hamburger-meny:hover #hamburger-content {
 	display: block;
 }
-
+/* display block så att länkarna inte pressas samman, använda styling på
+a istället för li så att hela området blev klickbart*/
 #hamburger-content li a {
 	display: block;
 	background-color: var(--lightest-color);
@@ -106,16 +109,18 @@ header {
 	justify-content: space-between;
 	margin: 0;
 }
+
+/*	-webkit-backdrop-filter pga av bristande support för ios*/
 #header-text-container {
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 	display: flex;
 	flex-direction: column;
 	color: var(--lightest-color);
 	margin: auto;
 	margin-bottom: 20px;
 	padding: 20px;
-	max-width: 340px;
+	max-width: 90%;
 	border-radius: 18px;
 	backdrop-filter: blur(35px);
 	-webkit-backdrop-filter: blur(35px);
@@ -192,6 +197,9 @@ header {
 main {
 	position: relative;
 }
+main button {
+	width: 100px;
+}
 /*-------------Services start ---------------*/
 .sektion-services-textdiv {
 	position: relative;
@@ -214,7 +222,6 @@ main {
 .sektion-services-textdiv button {
 	background-color: var(--complement-color);
 	color: var(--darker-color);
-	width: 100px;
 	align-self: self-end;
 }
 .sektion-services-textdiv button:hover {
@@ -239,7 +246,7 @@ main {
 
 #sektion-services-imgbulldog {
 	position: relative;
-	background-color: var(--main-color);
+	background-color: var(--darker-color);
 	background-image: linear-gradient(
 			var(--medium-color1-filter),
 			var(--medium-color1-filter)
@@ -518,6 +525,7 @@ main {
 	text-align: center;
 }
 
+/* Använder position fixed istället för attachment fixed pgav bristande support på ios*/
 .sektion-reviewandcontact-background-image {
 	position: fixed;
 	background-color: var(--main-color);
@@ -527,8 +535,8 @@ main {
 		),
 		url("bilder/Small/bridgeS.jpeg");
 	background-position: bottom 50% right 50%;
-	width: 100vw;
-	height: 100vh;
+	width: 100lvw;
+	height: 100lvh;
 	top: 0;
 	z-index: -1;
 	background-size: cover;
@@ -599,13 +607,14 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 }
 .form-container {
 	box-sizing: border-box;
 	background-color: var(--darker-color);
 	border-radius: 18px;
-	width: 100%;
+	width: 400px;
+	max-width: 90vw;
 }
 #formen {
 	display: flex;
@@ -626,9 +635,10 @@ main {
 	background-color: var(--light-color);
 	color: var(--darker-color);
 	padding: 20px;
-	margin: 20px;
+	margin-bottom: 20px;
 	min-height: 450px;
-	max-width: 350px;
+	width: 400px;
+	max-width: 90vw;
 	text-align: left;
 }
 .om-oss > img {
@@ -642,6 +652,7 @@ main {
 
 /*--------Footer-----------*/
 footer {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;

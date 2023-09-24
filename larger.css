@@ -70,6 +70,7 @@ header {
 /* -------------Navbar end--------------------- */
 
 #header-text-container {
+	max-width: 400px;
 	background-color: transparent;
 	color: var(--lightest-color);
 	margin-top: 25vh;
@@ -87,7 +88,7 @@ header {
 }
 #header-text-container button {
 	height: 40px;
-	width: 100px;
+
 	animation: none;
 }
 #header-linje {
@@ -185,13 +186,14 @@ header {
 	gap: 20px;
 }
 
-.om-oss {
+/* .om-oss {
 	margin: 0;
+	width: 380px;
 }
 
 .form-container {
-	width: 350px;
-}
+	width: 380px;
+} */
 
 /*--------------reviewandcontact-end-----------*/
 /*--------------footer-----------*/
